@@ -1,0 +1,1347 @@
+\section {Determinants}
+
+
+
+\subsection{Row Operations and Determinants}
+
+Let $A$ be a square matrix. 
+
+\begin{enumerate}
+	\item If a multiple of one row of $A$ is added to another row to produce a matrix $B$ (replacement operation) then $\det(B)=\det(A)$.
+	
+	\item If two rows of $A$ are interchanged to produce B then $\det(B)=-\det(A)$
+
+	\item If a row of $A$ is multiplied by a scalar to produce $B$, then $\det(B)=k\det(A)$
+\end{enumerate}
+
+Suppose a matrix $A$ has been reduced to Echelon form $U$ by row replacements and row interchanges.
+If there are $ r $  total interchanges performed
+
+\begin{equation}
+	\det(A) = (-1^{r}) \det(U)
+\end{equation}
+Since U is in echelon form (triangular) $\det(U)$ is the product of the diagonal entries.
+
+\hfill
+\hfill
+\begin{itemize}  
+  \item   If $A$ is invertible the entries on the diagonal are all pivots $(A \sim I_{n})$
+
+  \item If $A$ is non-invertible, at least one of these entries $u_{1},u_{2},\ldots,u_{nn}$ must be zero, so the product
+\end{itemize}
+
+\begin{equation}
+	u_{11},u_{22},\ldots,u_{nn} = 0
+\end{equation}
+
+So, for a matrix $A$ to be invertible,
+\begin{equation}
+	\label{}
+	\det(A)\neq 0
+\end{equation}
+
+\subsection{Determinant of Transpose}
+
+if $A$ $m \times n$
+\begin{equation}
+	\label{Theorem5}
+	\det(A^{T})=\det(A)
+\end{equation} 
+
+\subsection{Determinant of Products}
+
+If $A$ and $B$ are $n\times n$ matrices:
+\begin{equation}
+	\label{Theorem6}
+	\det(AB)=\det(A)\det(B)
+\end{equation}
+
+\subsection{Crammer's Rule}
+Useful for solving systems of equations.\\
+For any $n \times n$ matrix $A$ and any $b\in\mathbb{R}$, let $A_{i}(b)$ be the matrix obtained from $A$ by replacing column $i$ by vector $b$
+
+\hfill
+\hfill
+
+Let A be an invertible $n \times n$ matrix, for any $b\in\mathbb{R}^{n}$, the unique solution $x$ of $Ax=b$ has entries given by 
+
+\begin{equation}
+	\label{Theorem7}
+	x_{i}= \frac{\det(A_{i}b)}{\det(A)}
+\end{equation}
+
+Solving $Ax=b$
+\begin{enumerate}
+	\item 	Row reduction of augmented form
+	\item 	$A^{-1}b=x$
+	\item 	Crammer's Rule
+\end{enumerate}
+
+\subsection{Areas and Volumes by Determinant}
+
+\begin{enumerate}
+	\item 	If $A$ is a $2\times2$ matrix, the area of the parallelogram determined by the columns of $A$ is $|\det(A)|$
+
+	\item if A is a $3 \times 3$ matrix, the volume f the parallelepiped determined by the columns of a is $|\det(A)|$
+\end{enumerate}
+
+\subsection{Theorem 10}
+Let $T:\mathbb{R}^{n}\to\mathbb{R}^{n}$ be a linear transformation determined by a $2 \times 2$ matrix $A$, if $S$ is a parallelogram in $\mathbb{R}^{2}$, then
+
+\begin{equation}
+	\label{Theorem10}
+	A_{T(S)}= |\det(A)|\times A_{S}	
+\end{equation}
+
+Theorem 10 holds whenever S is a region in $\mathbb{R}^{2}$ with finite area or a region in $\mathbb{R}^{3}$ with finite volume.
+
+
+\section{Day 9 - }
+\subsection{Objectives}
+
+\begin{enumerate}
+	\item Know hat conditions for a set to be a subspace of a larger vector space
+	\item Find the column space and null space of a matrix
+	\item Show that a transformation between vector spaces in linear
+	\item Find the kernel/ Null space and range of a linear transformation
+	\item know how to find the basis for a vector space especially for the null space and column space
+\end{enumerate}
+
+\subsection{Vector Space}
+
+A vector space is a non-empty set V of objects, called vectors, on which are defined two operations, called addition and multiplication by sacalars subject to the 10 axioms listed below. The axioms must be held for all vectors $\vec{u},\vec{v},$ and $ \vec{w} $  in V and for all scalars $ c $  and $ d $ 
+
+
+\begin{enumerate}
+	\item The sum of $ \vec{u} $  and $ \vec{v} $ , directed by $ \vec{u}+\vec{v} $ , is in V
+	\item $\vec{u}+\vec{v}=\vec{v}+\vec{u}$
+	\item $(\vec{u}+\vec{v})+w = \vec{u} + (\vec{v}+w)$
+	\item There is a zero vector $0$ in $V$ such that $\vec{u}+0=\vec{u}$
+	\item For each $\vec{u}$ in $V$, there is a vector $-\vec{u}\in V$ such that $\vec{u}+(-\vec{u})=0$
+	\item The scalar multiple of $ \vec{u} $  by $ c $ , denoted by $c\vec{u}$, is in $ V $ 
+	\item $c(\vec{u}+\vec{v})=c\vec{u}+c\vec{v}$
+	\item $(c+d)\vec{u}=c\vec{u}+d\vec{u}$
+	\item $c(d\vec{u})=(cd)\vec{u}$
+	\item $1\vec{u}=\vec{u}$
+\end{enumerate}
+
+\hfill
+
+Can show:
+\begin{enumerate}
+  \item $0\vec{u}=0$
+	\item $c0=0$
+  \item $-\vec{u}=(-1)\vec{u}$
+\end{enumerate}
+
+
+$P_{n}$ for $n\ge 0$, polynomials with degree of at most $n$
+
+\[	
+	p(t) = a_{0}+a_{1}t+a_{2}t^{2}+\cdots + a_{n}t^{n}
+\]
+\[
+	\label{}	
+	q(t) = b_{0}+b_{1}t+b_{2}t^{2}+\cdots + b_{n}t^{n}
+\]
+
+Addition
+\[
+	(p+q)(t)=p(t)+q(t)= (a_{0}+b_{0})+(a_{1}+b_{1})t+\cdots +(a_{n}+b_{n})t^{n}
+\]
+
+\subsection{Subspaces}
+ Subspace - A subspace of a vector space $V$ is a subset $H$ of $V$ that has these properties
+ 
+ \begin{enumerate}
+	 \item the zero vector of $V$ is in $H$
+	\item $H$ is closed under vector addition
+
+		For any $u$ and $v\in H$, $u+v\in H$
+	\item $H$ is closed under multiplication by scalars 
+
+	 	For any $u$ in $H$, and scalar $c$, $cu \in H$
+ \end{enumerate}
+
+
+
+\begin{equation}
+\Biggl\{
+\begin{bmatrix}
+	s\\
+	t\\
+	0\\
+\end{bmatrix}: \mbox{s and t are real}
+\Biggr\}
+\end{equation}
+
+
+Vectors in H can be written in the form $u=s_{1}v_{1}+s_{2}v_{2}$ for some scalars $s_{1},s_{2}$.
+
+
+
+\hfill
+
+\textbf{Process for determining  if $H$ is a subspace}
+\begin{enumerate}
+	\item consider $s_{1}=s_{2}=0$
+
+    \[0v_{1}+0v_{2}=0 \in H\]
+
+\item consider $u,w\in H$
+\[u=s_{1}v_{1}+s_{2}v_{2}     \]
+\[w=t_{1}v_{1}+t_{2}v_{2}\]
+\[u+w=(s_{1}+t_{1})v_{1}+(s_{2}+t_{2})v_{2}\in H\]
+
+\item consider \[cu=c (s_{1}v_{1}+s_{2}v_{2})= (cs_{1}) v_{1}+ (cs_{2}) v_{2}\]
+\end{enumerate}
+
+\section{Space}
+
+\subsection{Null Space}
+
+
+
+Let
+\[
+	x_{1}-3x_{2}-2x_{3}=0
+\]
+
+\[
+	-5x_{1}+9x_{2}+x_{3}=0
+\]
+Solution set:
+\[
+\begin{bmatrix}
+	x_{1}\\
+	x_{2}\\
+	x_{3}\\
+\end{bmatrix}
+\]
+
+We define the set of $ x $  that satisfy $Ax=0$ the null space of $A$.
+
+\hfill
+\hfill
+
+
+\textbf{Null Space definition: }The null space of an $m\times n $ matrix $A$, denoted by Nul $A$ is the set of all solutions that satisfy $Ax=0$
+
+\subsubsection{Null space as a subspace theorem}
+The null space of an $m\times n$ matrix $A$ is a subspace of $\mathbb{R}^{n}$
+
+\textbf{Proof: }
+
+\[
+	\textbf{A}0=0
+\]
+\[
+	\vec{u},\vec{v} \in \mbox{Nul}\textbf{A} \to \textbf{A}\vec{u}=0, \textbf{A}\vec{v}=0 \to \vec{u}+\vec{v} \textbf{A} (\vec{u}+\vec{v})=\textbf{A}\vec{u}+\textbf{A}\vec{v}=
+\]
+\[
+	\vec{u}\in \mbox{Nul}\textbf{A} \to \textbf{A}\vec{u} \textbf{A}(c\vec{u})=c\textbf{A}\vec{u}=c0=0
+\]
+
+\subsection{Column Space Definition}
+ 
+
+The column space of an $m\times n$ matrix $\textbf{A}$ (Col $\textbf{A}$) is the set of all linear combinations of the columns of $\textbf{A}$, 
+$\textbf{A}=[\boldsymbol{a_{1},a_{2}, \ldots a_{n}}]$
+
+
+Col$\textbf{A} = $span \{$a_{1},\ldots,a_{n}$\}
+
+\subsection{}
+ The column space of an $m \times n$ matrix $\textbf{A}$ is a subspace of $\mathbb{R}^{n}$
+
+
+if Col$\textbf{A}$ is a subspace of $\mathbb{R}^{k}$, what is $k$?
+
+
+\subsection{Finding a vector in Col A}
+
+
+\[
+	\begin{bmatrix}
+		2\\
+		2\\
+		3\\
+	\end{bmatrix}
+	\in \mbox{Col}\textbf{A}
+\]
+
+\textbf{Nul A}
+
+
+\[	
+	\begin{bmatrix}
+		\textbf{A} & 0
+	\end{bmatrix}
+	\sim	
+	\begin{bmatrix}
+		a_1 & a_2 & \cdots & a_{n} & 0
+	\end{bmatrix}
+\]
+
+
+
+A linear transformation $T$ from a vector space $V$ into a vector space $W$ is a rule that assigns each vector $x\in V$ to a unique vector $T(x)$ in $W$ such that 
+
+\begin{enumerate}
+\item $T(\vec{u}+\vec{v})=T(\vec{u})+T(\vec{v})$ for all $\vec{u,v}\in V$
+	\item $T(c\vec{u})=cT(\vec{u})$ for all $\vec{u}\in V$ and scalars $c$
+	\item The kernel (or null space) is the set of all $\vec{u}$ in $V$ such that $T(\vec{u})=0$
+	\item The range of T is the set of all vectors in $W$ of the form $T(\vec{x})=0$
+\end{enumerate}
+
+\subsection{Linear Independence and Dependence}
+
+
+The definition of Linear Independence in $ \mathbb{R}^{n} $ 
+
+
+Consider: $c_{1}\vec{v_{1}}+c_{2}\vec{v_{2}}+ \cdots c_{p}\vec{v_{p}}=\textbf{0}$
+
+\begin{enumerate}
+	\item If this system has a non-trivial solution, $v_{1},\ldots,v_{p}$, are \textbf{linearly dependent}
+	\item If this system has \textbf{only} the trivial solution, $v_{1},\ldots,v_{p}$ are \textbf{linearly independent}.
+		
+\end{enumerate}
+
+\subsection{Linear Independence (Thm 4.4)}
+An indexed set (put in a certain order) of 2 or more vectors with $v_{1} \neq0$, is linearly dependent iff some $\vec{v_{j}},(j>1$) is a linear combination of the preceding vectors $v_{11},\ldots,v_{j-1}$
+
+
+\section{Basis Definition}
+
+
+
+Let $H$ be a subspace of a vector space $V_{1}$. 
+
+An indexed set of vectors $B=\{b_{1},\ldots,b_{p}\}$ in $V$ is a basis for $H$ if 
+
+
+\begin{itemize}
+	\item B is a linearly independent set
+	\item H is the span of the vectors of B
+\end{itemize}
+
+
+\subsection{Span in the context of removing linear combinations}
+Let $S=\{v1, \ldots, vp\}$ be a set in $V$ and let $H=\mbox{Span}\{v_{1},\ldots,v_{p}\}$
+	
+	\begin{enumerate}
+		\item If one of the vectors in $S$, denoted $v_{k}$, is a linear combination of the remaining vectors in $S$, then the set formed from S by removing $v_{k}$ will still span $H$
+	\end{enumerate}
+
+
+
+
+
+  \subsection{Basis of n vectors}
+  \subsubsection{Theorem 9}
+  
+If a vector space $V$ has a basis $B=\{b_{1},\ldots,b_{n}\}$, then any set in $V$ containing more than $n$ vectors must be linearly dependent.
+
+\subsubsection{Theorem 10}
+If a vector space $V$ has a basis of $n$ vectors, then every basis of $V$ must consist of exactly $n$ vectors.
+
+\hfill
+
+
+\textbf{Proof}
+
+
+let $B_{1}$ be a basis of $n$ vectors and $B_{2}$ be another basis of $V$
+
+
+\begin{enumerate}
+	\item Since $B_{1}$ is a basis and $B_{2}$ is linearly independent,
+
+	\item $B_{2}$ has no more than $n$ vectors by theorem Theorem 9
+\end{enumerate}
+
+
+
+\subsection{Dimensions}
+If V is spanned by a finite set, then V is said to be finite dimensional and \textbf{
+the dimension of V, written as 
+\begin{equation}
+	\label{}
+	\mbox{dim} V
+\end{equation}
+is the number of vectors in a basis for V.
+} 
+
+if V is not spanned by a finite set, then $V$ is infinite dimensional.
+
+
+\hfill
+
+
+The standard basis of $\mathbb{R}^{n}$ contains $n$ vectors
+
+\begin{equation}
+	\label{}
+e_{1}=	
+	\begin{bmatrix}
+	1\\
+	0\\
+	\cdots\\
+	0
+	\end{bmatrix}
+\cdots
+e_{n}=
+\begin{bmatrix}
+0\\
+0\\
+\cdots\\
+1
+\end{bmatrix}
+\end{equation}
+
+ 
+The standard polynomial basis $\{1,t,t^{2}\}$ spans $\mathbb{P}_{2}$. \mbox{dim}$\mathbb{P}_{2}=3$. 
+
+In general dim$\mathbb{P}_{n}=n+1$
+
+Let $H=\mbox{Span}\{v_{1},v_{2}\}$ where $v_{1}=
+\begin{bmatrix}
+	3\\ 6\\ 2
+\end{bmatrix}
+$, $v_{2}=
+\begin{bmatrix}
+-1\\ 0\\ 1	
+\end{bmatrix}
+$
+
+then $H$ is a plane, $\{v_{1},v_{2}\}$ is a basis for $H$ dim$H=2$
+
+
+The subspaces of $\mathbb{R}^{3}$ can be classified by dimension
+
+\begin{enumerate}
+	\item 0-dimensional subspace: only the zero subspace $
+		\begin{bmatrix}
+			0\\0\\0
+\end{bmatrix}
+	
+\item 1-dimensional subspace: Any subspace spanned by a non-zero vector: lines through origin
+\item 2 dimensional subspaces: spanned by two linearly independent vectors: plane through origin
+\item 3 dimensional subspaces: only $\mathbb{R}^{3}$ itself: any 3 vectors in $\mathbb{R}^{3}$ span $\mathbb{R}^{3}$
+\end{enumerate}
+
+\subsection{Theorem 11}
+Let $H$ be a subspace of a finite-dimensional vector space $V$
+
+Any LI set in H can be expanded, if necessary, to form a basis for H. Also, H is finite dimensional and 
+
+\begin{equation}
+	\label{}
+	\mbox{dim}H\leq\mbox{dim{V}}
+\end{equation}
+
+\begin{equation}
+	\label{}
+	S=\{v_{1},\ldots,v_{p}\}\in H
+\end{equation}
+
+
+\subsection{Theorem 12 - the basis theorem}
+
+\begin{enumerate}
+	\item Let V be a p-dimensional vector space ,$p\geq 1$
+	\item Any linearly independent set of exactly p elements in $V$ is automatically a basis for $V$. 
+	\item Any set of exactly p elements that spans $V$ is automatically a basis of $V$
+\end{enumerate}
+ 
+
+The pivot columns of a matrix A form the basis of Col A
+\begin{equation}
+	\label{}
+	A=[a_{1},\ldots,a_{n}]
+\end{equation}
+
+Then we know the dimension of Cl A as soon as we know the dimensions of the pivot columns
+
+\hfill
+
+
+\textbf{For the dimensions of Nul A}
+
+Assume A is $m\times n$ and $Ax=0$ has $k$ free variables
+
+The method for producing a basis for Nul A will produce exactly $k$ linearly independent vectors
+
+
+dim Nul A is the number of free variables in the equation $Ax=0$
+
+dim Col A is the number of pivot columns of $A$
+
+\subsection{Row Space}
+
+The row space is the set of all linear combinations of the \textbf{row vectors}
+
+
+\begin{equation}	
+	\begin{bmatrix}
+		1&2&3&4\\5&6&7&8\\9&10&11&12
+	\end{bmatrix}
+\end{equation}
+\begin{equation}
+	\label{}
+	r_{1}=[1,2,3,4],r_{2}=[5,6,7,8], etc	
+\end{equation}
+
+ 
+
+The rows of A correspond to the columns of $A^{T}$
+
+if we know the linear dependence relation among the rows of A, we could use the spanning theorem to shrink the set to a basis
+\subsection{Theorem 13}
+If 2 matrices A and B are row equivalent then their row spaces are the same
+
+If B is in echelon form, the non-zero rows of B form a basis for the row space of A as well as that of B
+
+\subsection{Rank A}
+the rank of A is the dimension of the column space of A
+
+
+rank A=dim Col A
+
+
+Since Row A = Col $A^{T}$, dim Row A = rank $A^{T}$
+
+\subsection{The Rank Theorem}
+The dimensions of the column space and the row space of an $m \times n$ matrix $A$ are equal
+
+This common dimension, the rank of A, also equals the number of pivot positions in A,and satisfies:
+\begin{equation}
+	\label{}
+	\mbox{Rank A} + \mbox{dim Nul A} = n\mbox{(number of columns)}
+\end{equation}
+
+\textbf{addition to imt}
+Let A $n\times n$, A is invertible (all this applies to $A^{T}$ btw
+
+\hfill
+
+The columns of A fom a basis of $\mathbb{R}^{n}$, (it spans)
+
+Col A = $\mathbb{R}^{n}$
+
+dim Col A = n
+
+Nul A = {0}
+
+dim Nul A = 0
+
+
+
+
+
+
+
+\section{4.4 Coordinate Systems and 4.6 Change of Basis}
+
+\subsection{Objective}
+
+
+\begin{enumerate}
+	\item Find the coordinate vector relative to a given basis
+	\item Understand how this coordinate mapping as an isomorphism that allows us to answer questions abut abstract vector spaces in Euclidian Space
+	\item Find the change of basis matrix and use it t convert from one basis to another
+	
+\end{enumerate}
+
+\subsection{Coordinate Systems}
+a basis B creates a coordinate system for vector space
+
+can map abstract vector maps to $\mathbb{R}^{n}$
+
+different coordinate systems in $\mathbb{R}^{n}$ offer different "views" of vector spaces
+	
+
+\subsection{Theorem 2: The Unique Representation Theorem}
+let $B=\{b_{1},\ldots,b_{n}\}$ be a basis for vector space $V$
+
+
+\hfill\
+
+
+Then for each $x\in V$ there exists a unique set of scalars so that we can write $\textbf{x}$ as a linear combination of these vectors
+
+\hfill
+
+
+
+
+\textbf{Definition: Basis Coordinates}
+
+Suppose $B=\{b_{1},\ldots,b_{n}$\} is a basis fr $V$ and $x\in V$,
+
+The coordinates of $x$ relative t $B$ (or the B coordinates of x) are the weights $c_{1},\ldots,c_{n}$ such that $x=c_{1}b_{1}+\cdots + c_{n}b_{n}$
+
+
+\begin{equation}
+	\label{}
+	[x]_{B}=	
+	\begin{bmatrix}
+	c_{1}\\c_{2}\\ \cdots \\ c_{n}
+	\end{bmatrix}
+\end{equation}
+
+The coordinate vector of $x$ relative to $B$, or the B-coordinate vector of $x$
+
+\hfill
+
+\textbf{standard basis:}
+$\varepsilon = \{e_{1},e_{2}\}$
+
+
+The coordinate mapping determined by $B=\{b_{1},b_{2}\}$ for $\mathbb{R}^{n}$, $b_{1}=
+\begin{bmatrix}
+1\\0	
+\end{bmatrix}
+$ and $
+b_{}{2}=
+\begin{bmatrix}
+	1\\2
+\end{bmatrix}
+$
+Suppose $[x]_{b}=
+\begin{bmatrix}
+	-2\\3
+\end{bmatrix}
+$, find $x$
+
+\begin{equation}
+	\label{}
+	x=(-2)b_{1}+3b_{2}
+\end{equation}
+
+
+
+The matrix
+$
+\begin{bmatrix}
+	1  & 1\\0&2	
+\end{bmatrix}
+$ changes the b coordinates of a vector $(c_{1},c_{2})$ into the standard coordinates for x.
+
+in general, for a basis $B=\{b_{1},\ldots,b_{n}\}$, Let $P_{B}=[b_{1},b_{2},\ldots,b_{n}]$
+
+\hfill
+
+Then the vector equation $x=c_{1}b_{1}+\cdots +c_{n}b_{n}$ is equivalent to $P_{B}[x]_{b}=x$
+
+$P_{B}$ is called the change of coordinate matrix from $B$ to the standard basis in $\mathbb{R}^{n}$. Furthermore, the columns of $P_{B}$ form a basis for $\mathbb{R}^{n}$, so $P_{B}$ is invertible by IMT. 
+
+\begin{equation}
+	\label{}
+	P_{B}^{-1} x = [x]_{B}
+\end{equation}
+
+
+By creating a basis in a vector space $V$, can create a coordinate system to relate to $\mathbb{R}^{n}$
+
+\subsection{Theorem 8}
+Let $B=\{b_{1},\ldots,b_{n}\}$ be a basis for a vector space $V$
+
+\hfill
+
+Then the coordinates mapping $x\to [x]_{B}$ is a one to one linear transformation from $V$ onto $\mathbb{R}^{n}$. This transformation is both one-to-one and onto. 
+
+
+\textbf{Define: Isomorphism}
+
+Isomorphisms are transformations that are both one to one and onto. 
+
+
+
+For a set of polynomials, for example
+\begin{equation}
+	\label{}
+	1+2t^{2},4+t+5t^{2},3+2t
+\end{equation}
+
+We can set an augmented matrix and solve Ax=0 to show if the set is linearly dependent or independent, with the row $a_{1}$ being the coefficients of the non t value and so on.
+
+
+\hfill
+
+It can be worthwhile to look at vectors in different coordinate systems
+
+Consider vector \textbf{x} and bases $B$ and $C$. Relate $[x]_{B}$ to $[x]_{C}$.
+
+$B=\{b_{1},b_{2}\}, C=\{c_{1},c_{2}\}$ for a vector space V such that $b_{1}=4c_{1}+c_{2} and b_{2}=-6c_{1}+c_{2}$. Suppose $x=3b_{1}+b_{2}$.
+
+\begin{equation}
+	\label{}
+	[x]_{B}=
+	\begin{bmatrix}
+	3\\1	
+	\end{bmatrix}
+\end{equation}
+\begin{equation}
+	\label{}
+	[x]_{c}=[3b_{1}+b_{2}]_{c}=3[b_{1}]_{c}+[b_{2}]_{c}.
+\end{equation}
+\begin{equation}
+	\label{}
+	[x]_{c}=\bigl[ [b_{1}]_{c} [b_{2}]_{c}\bigr]
+	\begin{bmatrix}
+		3\\1
+	\end{bmatrix}
+\end{equation}
+\begin{equation}
+	\label{}
+\begin{bmatrix}
+	4&-6\\1&1	
+\end{bmatrix}
+\begin{bmatrix}
+3\\1	
+\end{bmatrix}=
+\begin{bmatrix}
+	6\\4
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+	\label{}
+x=6c_{1}+4c_{2}	
+\end{equation}
+
+\subsection{Theorem 15 - Change of basis matrix P}
+ 
+Let $B=\{b_{1},\ldots,b_{n}\},C=\{c_{1},\ldots,c_{n}\}$ be bases of a vector space $V$. Then there is a unique $n\times n$ matrix $P_{C\Leftarrow B}$ such that 
+\begin{equation}
+	\label{}
+[x]_{c}=P_{C\Leftarrow B}[x]_{b}
+\end{equation}
+The columns of $P_{C\Leftarrow B}$ are the C-coordinate vectors of the vectors in the change of coordinate matrix from B to C
+
+ 
+\hfill
+
+
+\textbf{To find $P_{C\Leftarrow B}$}
+
+with $b_{1},b_{2},c_{2},c_{2}$. Row reduce $[c_{1},c_{2},b_{1},b_{2}]$, the left should reduce to identity matrix and the right half reduces to P. Vice Versa for C to B.
+
+ 
+\hfill
+
+P is square and has LI columns, so it is invertible by the IMT
+
+$B=\{b_{1},\ldots,b_{n}\}$ and $\epsilon=\{e_{1},\ldots,e_{n}\}$
+
+
+\begin{equation}
+	\label{}
+	[b_{1}]_{\epsilon}=b_{1} \mbox{and} P_{\epsilon\Leftarrow B}=P_{B}
+\end{equation}
+
+
+
+\section{5.1 Eigenvectors and Eigenvalues, 5.2 The character}
+
+\subsection{Eigenvectors}
+
+		
+\textbf{Eigenvector:} An eigenvector of an $n \times n$ matrix is a nonzero vector such that $Ax=\lambda x$ for some scalar $\lambda$
+
+$\lambda$ is an eigenvalue of A if there is a nontrivial solution \textbf{x} of $Ax=\lambda x$.
+
+\hfill
+
+To test if a vector is an eigenvector of a matrix, multiply the vector and matrix, then see if the result is a scalar multiple of the original vector.
+
+\hfill
+
+To show that a value is an eigenvalue of a matrix and finding the corresponding eigenvalue:
+
+given
+
+\begin{equation}
+	\label{}
+	A=
+\begin{bmatrix}
+	1 &6\\5& 2	
+\end{bmatrix}	
+\end{equation}
+\begin{equation}
+	\label{}
+Ax=7x\to Ax-7x=0 \to (A-7I)x=0 \to	
+\end{equation}
+\begin{equation}
+	\label{}
+A-7I=
+\begin{bmatrix}
+	1&6\\5&2	
+\end{bmatrix}
+-
+\begin{bmatrix}
+	7&0\\0&7	
+\end{bmatrix}
+=
+\begin{bmatrix}
+	-6&6\\5&-5	
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+	\label{}
+Bx=0\to
+\begin{bmatrix}
+	-6&6&0\\5&-5&0	
+\end{bmatrix}
+\sim
+\begin{bmatrix}
+	1&-1&0\\0&0&0	
+\end{bmatrix}
+\end{equation}
+$x_{1}=x_{2}$ and $x_{2}$ is free.
+
+Eigenspace $= \mbox{Span}\{
+	\begin{bmatrix}
+	1\\1	
+\end{bmatrix}\}
+$
+
+
+\begin{enumerate}
+	\item row reduction can be used to find eigenvectors, but does not help find eigenvalues 
+	\item In general $\lambda$ is an eigenvalue of A iff
+		\begin{equation}
+			(A-\lambda I)x=0	
+		\end{equation}
+		has a nontrivial solution
+	\item The set of all solutions is the null space of the matrix $A-\lambda I$
+	\item This space is a subspace of $\mathbb{R}^{n}$ called the Eigenspace of A corresponding to $\lambda$
+\end{enumerate}
+
+
+\subsection{Eigenvalue}
+
+\textbf{To find the eigenvalues of A}
+
+Find all $\lambda$ such that 
+\begin{equation}
+	\label{}
+	(A-\lambda I)x=0
+\end{equation}
+has nontrivial solution.
+\begin{equation}
+	\label{}
+\det(A-\lambda I)=0	
+\end{equation}
+
+\begin{equation}
+	\label{}
+A-\lambda I = 
+\begin{bmatrix}
+	a&b\\c&d	
+\end{bmatrix}-
+\begin{bmatrix}
+	\lambda & 0\\0&\lambda	
+\end{bmatrix}=
+\begin{bmatrix}
+	a-\lambda & b\\c&d-\lambda	
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+	\label{}
+\det(A-\lambda I) = \det(
+\begin{bmatrix}
+	a-\lambda & b\\c&d-\lambda	
+\end{bmatrix})=0.
+\end{equation}
+
+
+A scalar $\lambda$ is an eigenvalue of an $n \times n$ matrix A iff $\lambda$ satisfies the scalar equation
+\begin{equation}
+	\label{}
+\det(A-\lambda I)=0	
+\end{equation}
+
+which we call the characteristic equation
+
+if A is an $n \times n$ matrix, then the characteristic equation is a polynomial with degree $n$ called the characteristic polynomial. The algebraic multiplication of an eigenvalue i its multiplicity as a root of the characteristic equation
+
+\subsection{Theorem 1}
+The eigenvalues of a triangular matrix are the diagonal entries.
+
+\subsection{Theorem 2}
+If $v_{1},\ldots,v_{p}$ that correspond t distinct eigenvalues $\lambda_{1},\ldots,\lambda_{p}$ of an $n\times n$ matrix A, then the set of these vectors is linearly independent.
+
+\subsection{Invertible Matrix Theorem cont.}
+Let A be an $n\times n$ matrix then A is invertible iff 
+
+\begin{enumerate}
+	\item The number zero is not an eigenvalue of A
+\end{enumerate}
+
+
+\subsection{Similar Matrices}
+
+\textbf{Similarity:}
+A matrix A is similar to a matrix B iff there is an invertible matrix P such that
+\begin{equation}
+	P^{-1}AP=B,\mbox{or},A=PBP^{-1}	
+\end{equation}
+so B is similar to A, A and B are similar. Changing A into $P^{-1}AP$ is a similarity transformation.
+
+\subsection{Theorem 4}
+If $n\times n$ matrices A and B are similar, then they have the same characteristic polynomial and the same eigenvalues.\
+
+
+if $B=P^{-1}AP$, then
+
+\begin{equation}
+	\label{}
+	B-\lambda I = P^{-1}AP-\lambda P^{-1}P=P^{-1}(AP-\lambda P)=P^{-1}(A-\lambda I)P
+\end{equation}
+
+
+\begin{equation}
+	\label{}
+	\det(B-\lambda I)=\det[P^{-1}(A-\lambda I)P]=\det(P^{-1})	
+\end{equation}
+
+
+
+\section{5.3 Diagonalization and 5.4 Eigenvectors and Linear Transformations}
+
+
+
+
+
+
+
+\subsection{Difference Equations and Diagonalization}
+
+
+\textbf{Difference Equation:} A difference equation - a reurcive relation of the form $x_{k+1}=Ax_{k}$ for some matrix A and $x_{0},x_{1},x_{2}$
+
+
+Assume we start with initial condition $x_{0}$. $x_{1}=Ax_{0}$. $x_{2}=Ax_{1}=AAx_{0}=A^{2}x_{0}$. Generalized to:
+\begin{equation}
+	\label{}
+A^{k}=PD^{k}P^{-1}	
+\end{equation}
+
+\textbf{Diagonalizable Definition}: A square matrix $A$ is said to be diagonalizable if A is similar t a diagonal matrix, that is $A=PDP^{-1}$ for some invertible P and some diagonal D.
+
+\subsection{Theorem 5: The dianogalization Theorem}
+\begin{enumerate}
+	\item An $n\times n$ matrix A is diagonalizable iff A has n linearly independent eigenvectors
+	\item $A=PDP^{-1}$ with a diagonal matrix D, iff the columns of P are n linearly independent eigenvectors of A
+	\item The diagonal entries of D are eigenvalues of A that correspond to 
+\end{enumerate}
+i
+\subsection{Determining diagonal}
+\begin{enumerate}
+	\item Find eigenvalues $det(A-\lambda I)$	
+	\item Find 3 linearly independent eigenvectors of A
+	\item Construct matrix $P$ from vectors from step 2- Line up eigenvectors in matrix.
+	\item Construct matrix $D$ as a diagonal matrix of the corresponding eigenvalues
+\end{enumerate}
+
+\subsection{Theorem 6 and 7}
+
+
+\textbf{6}
+A $n\times n$ matrix with n distinct eigenvalues is diagonalizable 
+
+\hfill
+\hfill
+
+
+\textbf{7}
+Let a $n\times n$ matrix whose distinct eigenvalues are $\lambda_{1},\ldots,\lambda_{p}$
+
+for $1\leq x \leq$, the dimensions of the eigenspace for $\lambda_{k}$ is less than or equal to the multiplicity of $\lambda_{k}$
+
+The matrix A is diagonalizable iff the sum of the dimensions of the eigenspaces equals n
+\begin{enumerate}
+	\item The characteristic polynomial factors completely 
+	\item The dimension of the eigenspace of each $\lambda_{k}$=multiplicity of $\lambda_{k}$
+	\item if A is diagonalizable and $B_{k}$ is a basis for the eigenspace for each k, then the total collection of basis vectors is a basis for $\mathbb{R}^{n}$
+\end{enumerate}
+
+
+Can use basis coordinates to relate abstrac transformations to matrix multiplication on vectors in real spaces
+
+V is an n-dimensional vector space and W is a m-dimensional vector space
+\begin{enumerate}
+	\item B is a basis for V, the B-coordinate vector $[x]_{B}$ is in $\mathbb{R}^{n}$
+	\item C is a basis for W, the C-cordinate vector $[u]_{c}$ is in $\mathbb{R}^{n}$.
+	\item $\{b_{1},\ldots,b_{n}\}$ is the basis for B for V.
+	\item if $x\in r_{1}b_{1}+\cdots + r_{n}b_{n}$, $[x]_{B}=
+		\begin{bmatrix}
+		r_{1}\\r_{2}\\\cdots\\r_{n}	
+		\end{bmatrix}$
+\end{enumerate}
+
+
+	$T:v\to W$ is a linear transformation
+
+
+	$T(x)=T(r_{1}b_{1}+\cdots +r_{n}b_{n}=r_{1}T(b_{1})+\cdots +r_{n}T(b_{1}) \in W$
+
+	Since the C coordinate mapping from W to $\mathbb{R}^{n}$ is linear:
+
+	\begin{equation}
+		[T(x)]_{c}=[r_{1}T(b_{1})+\cdots r_{n}T(b_{1})]_{c} = r_{1}[T(b_{1})]+\cdots +r_{n}[T(b_{n})]_{c} \in \mathbb{R}^{n}
+	\end{equation}
+
+	\begin{equation}
+		[T(x)]_{c}=M[x]_{B},	M=\bigl[[T(b_{1}]_{c}\ldots[T(b_{n})]_{c}\bigr]	
+	\end{equation}
+	
+Linear transformations in $\mathbb{R}^{n}$
+
+\begin{enumerate}
+	\item A linear transformation T represented by marix multiplication $x\to Ax$
+	\item if A is diagonalizable then there is a basis B fr $\mathbb{R}^{n}$ consisting of eigenvectors of A.
+	\item it turns out that the B matrix for T is diagonal
+\end{enumerate}
+\subsection{Theorem 8 Diagonal matrix representation}
+Suppose $A=PDP^{-1}$. D is diagonal, P is invertible
+
+if B is the basis for $\mathbb{R}^{n}$ formed from the columns of P, call them $b_{1},b_{2},\ldots,b_{n}$ are eigenvalues of A. 
+
+D is the B matrix for the transformations $x\to Ax$. 
+
+
+
+\section{6.1 Inner Product, Length, Orthogonality}
+
+\subsection{Inner Product}
+If \textbf{u} and \textbf{v} vectors in $\mathbb{R}^{n}$ consider them as $n\times 1$ matrices.
+
+The transpose $u^{T}$ is a $1\times n$
+
+The matrix product: $u^{T}*v=1\times1$ matrix, a scalar, the inner product.
+\begin{equation}
+	\label{}
+	u=
+	\begin{bmatrix}
+	u\\\ldots u_{n}	
+	\end{bmatrix}
+	\begin{bmatrix}	
+	v=v\\\ldots v_{n}
+	\end{bmatrix}
+\end{equation}
+The inner product is
+\begin{equation}
+	\label{}
+	\begin{bmatrix}
+		u&\ldots&u_{n}	
+	\end{bmatrix}\times
+	\begin{bmatrix}
+	v\\\ldots\\v_{n}	
+	\end{bmatrix}
+\end{equation}
+
+
+\subsection{Theorem 6.1}
+\textbf{u,v,w} are vectors in $\mathbb{R}^{n}$. $c\in\mathbb{R}$.
+\begin{enumerate}
+	\item $u\cdot v = v\cdot u	$
+	\item $(u+v)\cdot w=u\cdot w+v\cdot w$
+	\item $(cu)\cdot v=c(u\cdot v)=u\cdot(cv)$
+	\item $u\cdot u\geq 0$ and $u\cdot u=0$ iff $u=0$
+\end{enumerate}
+
+
+\hfill
+\hfill
+
+
+\textbf{Definition: Length}
+The length or form of \textbf{v} is the non-negative scalar $||v||$
+\begin{equation}
+	\label{}
+	||v||=\sqrt{v\cdot v}=\sqrt{v_{1}^{2}+v_{2}^{2}+\cdots +v_{n}^{2}}	
+\end{equation}
+\begin{equation}
+	\label{}
+	||v||=\sqrt{v^{T}v}	
+\end{equation}
+
+For any scalar $c$ $cv$ is $|c|$ times the length of $v$
+
+\hfill
+\hfill
+
+
+\textbf{Definition: Unit Vector:} A vector whose length is one
+\begin{equation}
+	\label{}
+v,u=\frac{1}{||v||}v.	
+\end{equation}
+u is a unit vector in the direction of v, "normalized v"
+
+
+\hfill
+\hfill
+
+
+\textbf{Definition: distance}
+For \textbf{u,v}$\in\mathbb{R}^{n}$, the distance between u and v, written as dist(u,v) is the length of the vector \textbf{u-v}. 
+\begin{equation}
+	\label{}
+	\mbox{dist}(u,v)-||u-v||	
+\end{equation}
+
+\textbf{Definition: Orthogonal}: $u,v\in\mathbb{R}^{n}$ are orthogonal if $u\cdot v = 0$. They are perpendicular.
+
+\subsection{Theorem 2: Pythagorean Theorem}
+if we have two vectors u,v are orthogonal iff $||u+v||^{2}=||u||^{2}+||v||^{2}$. 
+
+\textbf{Orthogonal Set Definition}
+A set of vectors $\{u_{1},\ldots,u_{n}\}$ in $\mathbb{R}^{n}$ is an orthogonal set if each pair of distinct vectors from the set is orthogonal
+\begin{equation}
+	\label{}
+	u_{i}\cdot u_{j} = 0
+\end{equation}
+for any i,j
+
+$W\in\mathbb{R}^{n}$ if a vector z is orthogonal to every vector in $W$ (plane) z is orthogonal to W.
+
+
+
+\subsection{Theorem 4}
+if $S=\{u_{1},\ldots,u_{p}\}$ is an orthogonal set of nonzero vectors in $\mathbb{R}^{n}$, then S is linearly independent and is a basis fr the subspace spanned by S.
+
+
+\hfill
+\hfill
+
+
+\textbf{Definition: Orthogonal Basis:}
+An orthogonal basis for a subspace W of $\mathbb{R}^{n}$ is a basis for W that is also an orthogonal set
+
+
+\textbf{Theorem 5}: Let $[u]_{1},\ldots,[u]_{p}$ be an orthogonal basis for a subspace W of $\mathbb{R}^{n}$. For each y$\in$W the weights of the linear combination $y=c_1[u]_1+\cdots,c_p[u]_p$ are given by $c_{i}=\frac{y\cdot u_{i}}{u_{i}\cdot u_{i}}$
+
+
+\begin{equation}
+	\label{}
+	[y]_{B}=
+	\begin{bmatrix}
+		\frac{y\cdot u_{1}}{u_{1}\cdot u_{1}}\\\ldots\\\frac{y\cdot u_{p}}{u_{p}\cdot u_{p}}\\
+	\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+	\label{}
+	\hat y = \bigl(\frac{y\cdot u}{u\cdot u}\bigr)=\mbox{proj}_{u}y
+\end{equation} which is the orthogonal projection of y onto u. 
+
+
+\subsection{Theorem 8: Orthogonal Decomposition Theorem}
+Let W be a subspace of $\mathbb{R}^{n}$. Then every y $\in\mathbb{R}^{n}$ can be written uniquely in the form $y=\hat y+z$, where $\hat y \in W$ and $z\in W^{T}$, and if $[u]_{1},\ldots,[u]_{n}$ is an orthogonal basis of W
+
+
+\subsection{Theorem 9: Best approximation Theorem}
+W is a subspace f $\mathbb{R}^{n}$, let y be any vector in $\mathbb{R}^{n}$, $\hat y$ is the orthogonal projection of y into W
+
+then $\hat y$ is the closest point in W to y
+\begin{equation}
+	\label{}
+||y-\hat y|| < ||y-v||	
+\end{equation}
+for all v in W distinct from $\hat y$
+
+
+\section{6.4 The Gram-Schmidt Process and 6.5 Least Squares Problem}
+\subsection{Gram Schmidt}
+
+If we have $[v]_{1},\ldots,[v]_{n}$ 
+
+Let $W=[x]_{1},\ldots,[x]_{n}$, $x1=
+\begin{bmatrix}
+3\\6\\0	
+\end{bmatrix}, x_{2}=
+\begin{bmatrix}
+1\\2\\2	
+\end{bmatrix}$. Construct an orthogonal basis for W
+\begin{equation}
+	\label{}
+v_{1}=x_{1}	
+\end{equation}
+\begin{equation}
+	\label{}
+v_{2}=x_{2}-p	
+\end{equation}
+\begin{equation}
+	\label{}
+	p=\mbox{proj}_{x_{1}}x_{2}=\frac{x_{2}\cdot x_{1}}{x_{1}\cdot x_{1}}x_{1}
+\end{equation}
+
+
+
+
+\subsection{Theorem 11, The Gram Schmidt Process}
+Given a basis $[x]_{1},\ldots,[x]_{n}$ fr a nonzero space $W\in\mathbb{R}^{n}$, define
+Step 1:
+\begin{equation}
+	\label{}
+	v_{1}=x_{1}
+\end{equation}
+Step 2:
+\begin{equation}
+	\label{}
+	v_{2}=x_{2}-proj_{w_{1}}x_{2}
+\end{equation}
+Step 3:
+\begin{equation}
+	\label{}
+	W_{2}=\mbox{Span}\{x_{1},x_{2}\}
+\end{equation}
+\begin{equation}
+	\label{}
+	v_{3}=x_{3}-\mbox{proj}_{w_{2}}x_{3}=x_{3}-\biggl(\frac{x_{3}\cdot v_{1}}{v_{1}\cdot v_{1}}v_{1}+ \frac{x_{3}\cdot v_{2}}{v_{2}\cdot v_{2}}v_{2}\biggr)
+\end{equation}
+\begin{equation}
+	\label{}
+\cdots	
+\end{equation}
+\begin{equation}
+	\label{}
+v_{p}=x_{p}-\frac{x_{p}\cdot v_{1}}{v_{1}\cdot v_{1}}v_{1}-\cdots -\frac{x_{p}\cdot v_{p-1}}{v_{p-1}\cdot v_{p-1}}v_{p-1}
+\end{equation}
+
+\subsection{Least Squares}
+\begin{enumerate}
+	\item in applications $Ax=b$ won't often be consistent
+	\item \textbf{Definition: Least Squares}
+		if A is $m\times n$ and $b\in\mathbb{R}^{n}$, a least squares solution of $Ax=b$ is an x in $\mathbb{R}^{n}$ such that 
+		\begin{equation}
+			\label{}
+		||b-Ax||\leq||b-Ax||	
+		\end{equation}
+	for all $x\in\mathbb{R}^{n}$
+\item no matter what x e pick $Ax$ will always be in the column space of A
+\item Find x that makes $Ax$ the closest point in Col A to b
+\item Apply the approximation thm
+	\begin{equation}
+		\label{}
+		\hat b = \mbox{proj}_{Col A}b
+	\end{equation}
+\item because b in in Col A $Ax=\hat b$ is consistent
+\end{enumerate}
+Suppose x satisfies $Ax=b$, by the orthogonal decomposition theorem $b-\hat b$ is rthogonal to Col A, meaning $b-\hat b$ is orthogonal to each column of A.
+\begin{equation}
+	\label{}
+a_{j}\cdot (b-\hat b) = 0
+\end{equation}
+\begin{equation}
+	\label{}
+a_{j}^{T}(b-\hat b) = 0	
+\end{equation}
+\begin{equation}
+	\label{}
+	A^{T}(b-\hat b)=A^{T}(b-Ax)=0	
+\end{equation}
+\begin{equation}
+	\label{}
+A^{T}b-A^{T}Ax=0	
+\end{equation}
+\begin{equation}
+	\label{}
+A^{T}Ax=A^{T}b	
+\end{equation}
+
+\subsection{Theorem 13}
+The set of least squares solutions of Ax=b coincides with the non-empty set of solution to the novel equations.
+
+\subsection{Theorem 14}
+Let A be an $m\times n$ matrix, the following statements are logically equivalent
+
+\begin{enumerate}
+	\item The equation Ax=b has a unique least squares solution for each b in $\mathbb{R}^{n}$
+	\item The columns of A are linearly independent
+	\item The matrix $A^{T}A$ is invertible
+\end{enumerate}
+When these statements are true, the least squares slution $\hat x$ is given by
+\begin{equation}
+	\label{}
+\hat x =(A^{T}A)^{-1}A^{T}b	
+\end{equation}
+
+\section{Final Additions}
+
+Prove Linear Transformation
+\begin{equation}
+	\label{}
+	T(u+v)=T(u)+T(v)
+\end{equation}
+and
+\begin{equation}
+	\label{}
+	T(cu)=cT(u)
+\end{equation}
+
+\hfill
+\hfill
+
+\textbf{Linear Combination Matrix}
+T(x) represented as Ax=b
+\begin{equation}
+	\label{}
+	A=[T(e_{1}), T(e_{2}),\ldots, T(e_{n})]	
+\end{equation}
+with $e_{1},\ldots,e_{n}$ vectors/columns of the identity matrix
+
+\hfill
+\hfill
+
+\textbf{Change of Basis Transformation Matrix}
+For matrix transformations between coordinate systems
+\begin{equation}
+	\label{}
+M=
+\begin{bmatrix}
+	[T(b_{1})]_{C}&\ldots&[T(b_{n})]_{C}	
+\end{bmatrix}
+\end{equation}
+$T(b_{1})$ is the transformation of the original first basis vector. Possibly identity, depending on question. 
+
+For putting in it coordinates of C, say $[v]_{C}$, row reduce the matrix made from the basis vectors in C to v, or in the above case $T(b_{n})$
+
+\hfill
+\hfill
+
+\textbf{Theorem one to one matrix transformations}
+logically equivalent: 
+\begin{enumerate}
+	\item t is one to one
+	\item for every b in Rm the equation T(x)=b has at mst one solution
+	\item for every b in rm AX=b is either unique or is inconsistent 
+	\item Ax-0 has only trivial
+	\item Columns linearly independent
+	\item A has a pivot in every column
+	\item The range of T has dimensions n
+\end{enumerate}
+
+\textbf{Theorem onto}
+\begin{enumerate}
+	\item T is onto
+	\item T(x)=b has at least one solution fr ever b in R
+	\item Ax=b is consistent for every b in R
+	\item The columns of A span R
+	\item A has a pivot in every row 
+	\item The range of T has dimensions m
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}
+

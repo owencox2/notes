@@ -1,0 +1,668 @@
+\section{Introductions}
+\textbf{A function} is a rule mapping one set $X$ to another set $Y$.
+\begin{equation}
+	\mbox{example: }y=f(x)=x^{2}+x
+\end{equation}
+A \textbf{vector function} maps a point to a vector
+\begin{equation}
+	\label{}
+	F(x,y,z)=\hat{\imath}F_{x}(xyz)+\hat{\jmath}F_{y}(x,y,z)+\hat{k}F_{z}F(x,y,z)
+\end{equation}
+A \textbf{field} assigns value to each point simultaneously. Can be a scalar-valued field or a vector-valued field
+
+\subsection{Position Vector}
+
+\begin{equation}
+	\label{}
+	\vec{r}=x\hat{i}+y\hat{j}+z\hat{k},\quad\mbox{magnitude}=\sqrt{x^{2}+y^{2}+z^{2}}
+\end{equation}
+
+
+The \textbf{radial unit vector} is given by 
+\begin{equation}
+	\label{}
+	\hat{r}=\frac{\vec{r}}{r}
+\end{equation}
+
+\subsection{Electrostatics}
+Recall Coulomb's law
+\begin{equation}
+	\label{}
+	F=\frac{1}{4\pi\epsilon_{0}}\frac{qq_{0}}{r^{2}}
+\end{equation}
+gives magnitude of a force vector. When considering two charges with positions $\vec{r}$ and $\vec{r_{0}}$ force is given by
+\begin{equation}
+	\label{}	
+	F=\frac{1}{4\pi\epsilon_{0}}\frac{qq_{0}}{|r-r_{0}|^{2}}\cdot\frac{r-r_{0}}{|r-r_{0}|}
+\end{equation}
+The \textbf{electric field} is given by 
+\begin{equation}
+	\label{}
+	\vec{E}(\vec{r})=\frac{\vec{F}(r)}{q}
+\end{equation}
+If there are multiple charges use superposition $\vec{E}=\vec{E_{1}}+\vec{E_{2}}+\cdots$
+
+
+For a \textbf{continuous distribution} of charge the average charge density in $\Delta V$ is given by $\bar{\rho}_{\Delta V}=\frac{\Delta Q}{\Delta V}$. The charge density at $(x,y,z)$ is given $\rho(x,y,z)=\lim_{\Delta V\to0}\frac{\Delta Q}{\Delta V}$
+
+For a very small volume $dV$ with very small charge $dQ$
+\begin{equation}
+	\label{}
+	dQ=\rho(x,y,z)dV
+\end{equation}
+\begin{equation}
+	\label{}
+	\vec{E}=\int d\vec{E}=\int_{V}\frac{1}{4\pi\epsilon_{0}}\frac{\rho(x_{0},y_{0},z_{0})}{|r-r_{0}|^{3}}(r-r_{0})dV_{0}
+\end{equation}
+
+\textbf{Gauss's Law}
+\begin{equation}
+	\label{}
+	\iint_{S}\vec{E}\cdot\hat{n}dS=\frac{q}{\epsilon_{0}}
+\end{equation}
+where $\hat{n}$ is a \textbf{unit normal vector} with magnitude 1 and is normal, or perpendicular, to the surface.
+
+Normal vector for vectors $\vec{u}$ and $\vec{v}$
+\begin{equation}
+	\label{}
+	\hat{n}=\frac{\vec{u}\times \vec{v}}{|\vec{u}\times \vec{v}|}
+\end{equation}
+This gives two vectors pointing in opposite directions, for a closed surface the convention is to use outward vector.
+
+\begin{equation}
+	\label{}
+	\hat{n}=\frac{-\hat{i}\frac{df}{dx}-\hat{j}\frac{df}{dy}+\hat{k}}{\sqrt{1+(\frac{df}{dx})^{2}+(\frac{df}{dy})^{2}}}
+\end{equation}
+
+\section{Gauss' Law}
+\begin{equation}
+	\label{}
+	\iint_{S}\vec{E}\cdot\hat{n}dS=\frac{q}{\epsilon_{0}}=\frac{1}{\varepsilon_0}\int\rho dV
+\end{equation}
+Flux through a surface $S$, usually a closed surface. $q$ is the charge enclosed by $S$.
+
+
+\subsection{Surface Integrals}
+\begin{equation}
+	\label{}
+\iint_{S}G(x,y,z)dS=\iint_{R}G(x,y,f(x,y))\sqrt{1+(\frac{df}{dx})^{2}+{(\frac{df}{dy})}^{2}dR}
+\end{equation}
+
+\textbf{Scalar field surface integral: } For $G(x,y,z)=1$, the integral gives just the total surface area. If the integrand is a surface mass density function, then the surface integral gives total mass on the surface. $ dR $ is the projection of the form onto two axis. For example, if a function for $ z $ is given in terms of $ x\text{ and }y, dR=dxdy$
+\begin{equation}
+	\label{}
+	\iint_{S}G(x,y,z)dS
+\end{equation}
+
+\textbf{Vector field surface integral: }
+$\hat{n}$ is the unit normal to dS. Dot product gives projection of $\vec{F}$ onto $\hat{n}$. The integral thus gives the weighted sum of how much of $\vec{F}$ points through the surface $S$.
+
+\begin{equation}
+	\label{}
+	\iint_{S}\vec{F}\cdot\hat{n}dS
+\end{equation}
+
+\textbf{Approximate Definition: } A surface integral on surface $S$ is a Riemann sum over faces of a polyhedron that approximates $S$ such that each face is tangent to $S$ at some point.
+
+
+\textbf{To calculate}  one needs to consider integrand and parametrize surface. If $S$ is not parallel to coordinate plane, it needs to be projected
+
+
+\textbf{Flux} vector field surface integral of $\vec{F}$ gives flux of $\vec{F}$ through a surface. Example is velocity of fluid, find rate of flow
+
+\begin{equation}
+	\label{}
+	\iint_{R}\bigg(-F_{x}\frac{df}{dx}-F_{y}\frac{df}{dy}+F_{z}\bigg)dx\ dy
+\end{equation}
+This equation works for the projection of a shape $ e_1(e_2,e_3) $ onto a perpendicular plane $ (e_2,e_3) $.
+
+
+\hfill
+\hfill
+
+
+\textbf{For Gauss' law:}
+
+\begin{equation}
+	\label{}
+	\oint_{S}\vec{E}\cdot\hat{n}\ dS=\frac{q_{enc}}{\epsilon_{0}}
+\end{equation}
+this equation requires (to be convenient)
+\begin{enumerate}
+	\item field must have radial symmetry
+	\item strength of field must be equal everywhere at given distance, constant on sphere centred on charge.
+\end{enumerate}
+To use:
+\begin{enumerate}
+	\item Put $q$ at origin $\vec{E}$ must be in form of $E(r)\hat{e_{r}}$
+	\item Choose surface for integral: sphere centred at origin, radius R
+	\item thus $\hat{n}=\hat{e_{r}}$, so $\vec{E}\cdot\hat{n}=E(r)$
+\end{enumerate}
+
+
+\section{Polar Cylindrical and Spherical Coordinates}
+\subsection{Cartesian to cylindrical}
+\[
+\hat{\imath}=\hat{e_{r}}\cos\theta-\hat{e_{\theta}}\sin\theta	\]
+\[\hat{\jmath}=\hat{e_{r}}\sin\theta+\hat{e_{\theta}}\cos\theta	\]
+\[	\hat{k}=\hat{e_{z}}.\] 
+
+\subsection{Cartesian to Spherical}
+\[\hat{\imath}=\hat{e}\sin\phi\cos\theta+\hat{e}_{\phi}\cos \phi\cos\theta-\hat{e}_{\theta}\sin\theta.\] 
+\[\hat{\jmath}=\hat{e}_{r}\sin \phi\sin\theta+\hat{e}_{\phi}\cos \phi\sin\theta+\hat{e}_{\theta}\sin\theta.\] 
+\[\hat{k}=\hat{e}_{r}\cos \phi-\hat{e}_{\phi}\sin \phi.\] 
+
+\subsection{Derivative changes}
+Given
+\[x=r\cos \theta.\] 
+\[y=r\sin\theta.\] 
+Use identities:
+\[dx=\frac{dx}{d \theta}d \theta,dy=\frac{dy}{d \theta}d \theta.\] 
+\[\frac{dx}{d \theta}=r\sin \theta.\] 
+\[\frac{dy}{d \theta} = -r\cos\theta.\]
+\section{Divergence}
+Finding flux at a point can give a form of Gauss' Law that only depends on a field at a single point, rather than a constant $\vec{E}$ on the surface. 
+
+\begin{equation}
+	\label{}
+	\lim_{V\to 0}\frac{1}{V}\oint_{S}\vec{E}\cdot\hat{n}dS=\frac{p(x,y,z)}{\epsilon_{0}}	
+\end{equation}
+
+	
+\textbf{Divergence definition: (regardless of coordinates)}
+\begin{equation}
+	\label{}	
+	\mbox{div}\vec{F}=\lim_{V\to 0}\frac{1}{V}\iint_{S}\vec{F}\cdot\hat{n}dS
+\end{equation}
+
+\subsection{Derived Forms: }
+
+Cartesian:
+\begin{equation}
+	\label{}
+	\mbox{div}\vec{F}=\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}+\frac{\partial F_{z}}{\partial z}
+\end{equation}
+Cylindrical:
+\begin{equation}
+	\label{}
+	\mbox{div}\vec{F}=\frac{1}{r}\frac{\partial}{\partial r}(rF_{r})+\frac{1}{r}\frac{\partial F_{\theta}}{\partial\theta}+\frac{\partial F_{z}}{\partial z}
+\end{equation}
+Spherical:
+\begin{equation}
+	\label{}
+\mbox{div}\vec{F}=\frac{1}{r^{2}}\frac{\partial}{\partial r}(r^{2}F_{r})+\frac{1}{r\sin(\phi)}\frac{\partial}{\partial \phi}(\sin(\phi)F_{\phi})+\frac{1}{r\sin(\phi)}\frac{\partial F_{\theta}}{\partial\theta}
+\end{equation}
+
+\subsection{Del operator}
+$\frac{\partial}{\partial x}$ is the scalar derivative operator. It can be applied to a function, giving another function.
+\[
+	f(x)\frac{\partial}{\partial x}\neq\frac{\partial}{\partial x}f(x)
+\] 
+
+Vector Derivation Operator (Del ):
+\begin{equation}
+	\label{}
+	\vec{\nabla}=\frac{\partial}{\partial x}\hat{\imath}+\frac{\partial}{\partial y}\hat{\jmath}+\frac{\partial}{\partial z}\hat{k}
+\end{equation}
+
+\textbf{Divergence Theorem}
+
+Connects volume and surface integral
+\begin{equation}
+	\label{}
+	\oint_{s}\vec{F}\cdot\hat{n}dS=\iiint_{V}\vec{\nabla}\cdot\vec{F}dV
+\end{equation}
+The flux through $S$ is equivalent to the rate at which enclosed amount changes, where surface $S$ is boundary of Volume $V$
+\[
+	\vec{\nabla}\cdot\vec{F}=\mbox{div}\vec{F}.\] 
+
+The divergence theorem is useful because it is often easier to find the divergence of $\vec{F}$ and do a volume integral than it is to do the surface integral on $\vec{F}\cdot\hat{n}$
+
+\subsection{Application to Gauss' Law}
+\[
+\oint\vec{E}\cdot\hat{n}dS=\int_{V}\vec{\nabla}\cdot\vec{E}dV
+\]
+\[
+\frac{q_{enc}}{\epsilon_0}=\frac{1}{\epsilon_0}\int_{V}\rho(x,y,z)dV.\] 
+\begin{equation}
+	\label{}
+	\int_{V}\vec{\nabla}\cdot\vec{E}dV=\frac{1}{\epsilon_0}\int_{V}\rho(x,y,z)dV
+\end{equation}
+
+This is true for all volumes $V$, so integrands are equal, and thus the \textbf{differential form of Gauss' Law is }
+\begin{equation}
+	\label{}
+	\vec{\nabla}\cdot\vec{E}=\frac{\rho}{\epsilon_0}
+\end{equation}
+
+\subsection{Work}
+\begin{equation}
+	\label{}
+	W=\int_{c}\vec{F}\cdot d\vec{s}=\int_C\vec{F}\cdot\vec{t}ds
+\end{equation}
+Where $ \vec{t} $ is tangent to curve $ C $, a unit vector. $ ds $ is the loewr case line element
+
+\section{Line Integrals}
+\begin{enumerate}
+	\item Scalar: $ \int_C F_(x,y,z)ds $	
+	\item Vector: $ \int_C\vec{F(x,y,z)}\cdot\vec{t}(x,y,z)$
+\end{enumerate}
+
+\subsection{Parametrizing (Directed) Curves}
+
+Integrating over a 1D object (curve), parametrize in terms of one parameter. For example every component of projectile motion can be parametrized with $ t $.
+Parametrized forms are not unique, and some thought can lead to more useful parametrizations. 
+
+\subsection{Scalar Line Integrals}
+
+\begin{equation}
+	\label{}
+	\int_{C}f(x,y,z)ds
+\end{equation}
+Where $ ds $ is the line element.
+\begin{equation}
+	\label{}
+	ds=\sqrt{dx^2+dy^2}=\sqrt{\frac{dx}{dt}^2\frac{dy}{dt}^2}dt=|\vec{r'}(t)|dt
+\end{equation}
+gives useful form:
+\begin{equation}
+	\label{}
+	\int_{C}f(x,y,z)ds=\int_{t_i}^{t_f}f(x(t),y(t),z(t))|\vec{r'}(t)|dt
+\end{equation}
+For a function $ f(\vec{r}) =1,\quad \int_{C}f(\vec{r})ds=\int_{C}ds $, the path length. 
+
+\subsection{Vector Line Integrals}
+
+\begin{equation}
+	\label{}
+	\int_{C}\vec{F}(\vec{r})\cdot\vec{t}ds,\quad\vec{t}=\frac{\vec{r'(t)}}{|\vec{r'}(t)|},\quad\int_{C}\vec{F}(\vec{r})\cdot \frac{\vec{r'}(t)}{|\vec{r'}(t)|}|\vec{r'}(t)|dt
+\end{equation}
+gives useful form:
+\begin{equation}
+	\label{}
+	\int_{C}\vec{F}(\vec{r})\cdot\vec{r'}(t)dt=\int_C f_x dx+f_y dy+f_z dz
+\end{equation}
+
+Line integrals of most vector fields are \textbf{path dependent}, but there are some special fields whose integrals are \textbf{path independent}. These are conservative vector fields. In other words, a line integral is path-independent if a closed loop gives 0. 
+
+
+
+
+\section{curl}
+Definition:
+
+
+\begin{equation}
+	\hat{n}\cdot curl\vec{F}=\lim_{A\to_0}\frac{1}{A}\oint_{C}\vec{F}\cdot \hat{t}ds
+\end{equation}
+Derived by considering the line integral of an infinitesimal, generic closed loop.
+Useful form:
+\begin{equation}
+	curl\vec{F}=\vec{\nabla}\times \vec{F}=
+	\begin{bmatrix}
+		\hat{\imath} &\hat{\jmath}&\hat{k}\\\frac{\partial}{\partial x} & \frac{\partial}{\partial y}&\frac{\partial}{\partial z} \\ F_{x}&F_{y}&F_{z}
+	\end{bmatrix}
+\end{equation}
+
+\subsection{Useful Form}
+\begin{equation}
+	curl\vec{F}=\hat{\imath}\big(\frac{\partial F_{z}}{\partial y}-\frac{\partial F_{y}}{\partial z}\big)+\hat{\jmath}\big(\frac{\partial F_{x}}{\partial z}-\frac{\partial F_{z}}{\partial x}\big)+\hat{k}(\frac{\partial F_{y}}{\partial x}-\frac{\partial F_{x}}{\partial y})
+\end{equation}
+
+For path independent fields, any curves connecting two points have equivalent line integrals, with the possibility of a different sign depending on direction.
+
+\subsubsection{Physical interpretation of curl}
+Imagine a vector field $ \vec{v} $ representing velocity for a fluid. $ \vec{\nabla}\times \vec{v} $ is related to torque on some rigid body immersed in fluid. For a $ \vec{v}=v_0e^{-(\frac{x^{2}}{\lambda^2})}\hat{\jmath} $, $ x $  close to origin will be pushed harder than farther, causing a net clockwise torque, assuming object is in the first quadrant.
+
+\subsubsection{path independence}
+The curl of a conservative vector field is $ 0 $. Given the \textbf{electric force} is conservative, line integrals of $ \vec{E} $ are path independent. This gives the form
+\begin{equation}
+	\vec{\nabla}\times \vec{F}=0
+\end{equation}
+Which is known as the differential form of the circulation law. Thus,
+if
+\begin{enumerate}
+	\item $ \vec{\nabla} \times \vec{F}=0, \vec{F}$ could be an electrostatic field
+	\item $ \vec{\nabla}\vec{F}\neq 0,\vec{F} $ cannot be an electrostatic field
+\end{enumerate}
+
+\subsection{Curl in spherical and cylindrical}
+\subsubsection{Cylindrical curl}
+\begin{equation}
+	{(\vec{\nabla}\times \vec{F})}_{r}=\frac{1}{r}\frac{\partial F_{z}}{\partial\theta}-\frac{\partial F_{\theta}}{\partial z}
+\end{equation}
+\begin{equation}
+	{(\vec{\nabla}\times \vec{F})}_{\theta}=\frac{\partial F_{r}}{\partial z}-\frac{\partial F_{z}}{\partial r}
+\end{equation}
+\begin{equation}
+	{(\vec{\nabla}\times \vec{F})}_{z}=\frac{1}{r}\frac{\partial}{\partial r}(rF_{\theta})-\frac{1}{r}\frac{\partial F_{r}}{\partial\theta}
+\end{equation}
+
+
+\subsubsection{Spherical Curl}
+\begin{equation}
+	{(\vec{\nabla}\times \vec{F})}_{r}=\frac{1}{r\sin\phi}\frac{\partial}{\partial\phi}(\sin\phi F_{\theta})-\frac{1}{r\sin\phi}\frac{\partial F_{\phi}}{\partial\theta}
+\end{equation}
+\begin{equation}
+	{(\vec{\nabla}\times \vec{F})}_{\phi}=\frac{1}{r\sin\phi}\frac{\partial F_{r}}{\partial\theta}-\frac{1}{r}\frac{\partial}{\partial r}(r F_{\theta})
+\end{equation}
+\begin{equation}
+	{(\vec{\nabla}\times \vec{F})}_{\theta}=\frac{1}{r}\frac{\partial}{\partial r}(rF_{\phi})-\frac{1}{r}\frac{\partial F_{r}}{\partial\phi}
+\end{equation}
+
+
+
+
+\subsection{Stoke's Theorem}
+\begin{equation}
+	\int_{C}\vec{F}\cdot\hat{t}=\iint_{S}\hat{n}\cdot\vec{\nabla}\times \vec{F}ds
+\end{equation}
+Stoke's Theorem requires use of an \textbf{open surface integral} rather than a closed surface (like in the case of Gauss's Law). When compared to the curve on the line integral side, the surface must either fill the area within the curve or form a shape on top that does not contain the shape tangent to the curve.
+\section{Gradient and Laplacian}
+\subsection{Gradient}
+\begin{equation}
+	\vec{\nabla}f=\hat{\imath}\frac{df}{dx}+\hat{\jmath}\frac{df}{dy}+\hat{k}\frac{df}{dz}
+\end{equation}
+
+\subsubsection{Gradient and Path Independence}
+Consider a conservative force $ \vec{F} $. It is path independent.
+\begin{equation}
+	\vec{F}=-\vec{\nabla}u
+\end{equation}
+where $ u $ is potential energy (scalar, one degree of freedom)
+
+
+
+\subsection{Laplacian}
+\begin{equation}
+	\vec{\nabla^2}\vec{f}=\vec{\nabla}\cdot(\vec{\nabla}\vec{f})=\hat{\imath}\frac{d^2f}{dx^2}+\hat{\jmath}\frac{d^2f}{dy^2}+\hat{k}\frac{d^2f}{dz^2}
+\end{equation}
+
+\subsubsection{Vector Laplacian}
+\begin{equation}
+	\nabla^2\vec{F}=\nabla^2F_{x}\hat{\imath}+\nabla^2F_{y}\hat{\jmath}+\nabla^2F_z\hat{k}
+\end{equation}
+
+\subsection{Electrostatics}
+$ \vec{E} $ is path-independent. Thus
+\begin{equation}
+	\vec{E}=-\vec{\nabla}\Phi
+\end{equation}
+\subsubsection{Gauss's Law}
+\begin{equation}
+	\nabla^2\Phi=-\frac{\rho}{\varepsilon_0}
+\end{equation}
+Which in a region without charge gives \textbf{Laplace's Equation}
+\begin{equation}
+	\nabla^2\Phi=0
+\end{equation}
+
+\subsection{Finding parent functions}
+\subsubsection{method 1: direct integration}
+\begin{enumerate}
+	\item $ f(x,y,z)-f(x_0,y_0,z_0)=\int_{z_0,y_0,z_0}^{x,y,z}\vec{F} \cdot \hat{t}ds$
+	\item Find $\int\vec{F}\cdot\hat{t}ds $
+	\item Solve for $ f(x,y,z) $
+\end{enumerate}
+\subsubsection{Method 2: Component-wise integration}
+see calc 3 notes.
+
+\section{Taylor Series}
+In $ 3D $
+\begin{equation}
+	\begin{split}	
+		f(x+\Delta x,y+\Delta y,z+\Delta z)=f(x,y,z) & +\overbrace{\frac{df}{dx}\Delta x+\frac{df}{dy}\Delta y +\frac{df}{dz}\Delta z}^{\mbox{1st order terms}}	\\
+		& +()\Delta x^2 + ()\Delta y^2 + ()\Delta z^2 	\\
+		& + ()\Delta x\Delta y + ()\Delta x \Delta z +()\Delta y \Delta z\\
+		& + O(\Delta^{3})
+	\end{split}
+\end{equation}
+Assuming $ \Delta x,\Delta y, \Delta z $ are mall, $ O(\Delta^2) $ are negligible compared to $ O(\Delta) $. Nd order and higher can be neglected.
+
+
+Use to find coordinate independent form of gradient
+
+Define:
+\begin{equation}
+\begin{split}	
+	\Delta f&=f(x+\Delta x,y+\Delta y,z+\Delta z)-f(x,y,z) \\
+		&=\underbrace{(\frac{df}{dx}\hat{\imath}+\frac{df}{dy}\hat{\jmath}+\frac{df}{dz}\hat{k})}_{\vec{\nabla f}} \cdot\underbrace{(\Delta x\hat{\imath}+\Delta y\hat{\jmath} +\Delta z \hat{k})}_{\Delta\vec{S}=\Delta S\hat{u}}+O(\Delta^2)
+\end{split}
+\end{equation}
+Where $ \hat{u} $ is unit vector in direction of displacement. Taking the limit of $ \frac{\Delta f}{\Delta s} $ as $ \Delta S\to 0 $ gives the \textbf{coordinate independent definition of gradient:}
+\begin{equation}
+	\frac{df}{ds}=\vec{\nabla}f\cdot\hat{u}
+\end{equation}
+
+\begin{equation}
+	\vec{\nabla}f=\hat{\imath}\frac{\partial f}{\partial x}+\hat{\jmath}\frac{\partial f}{\partial y}+\hat{z}\frac{\partial f}{\partial z}
+\end{equation}
+
+
+
+
+\subsection{Meaning of Gradient}
+Gradient indicates direction of steepest ascent
+
+\begin{equation}
+	\frac{df}{ds}=\vec{\nabla}f\cdot\hat{u}
+\end{equation}
+This represents how steep $ f $ is in $ \hat{u} $ direction. $ \frac{df}{ds} $ is largest when $ \hat{u}+\vec{\nabla}f $ point in the same direction.
+
+\begin{equation}
+	\vec{F}=-\vec{\nabla}u
+\end{equation}
+Where $ \vec{F} $ is a force and $ u $ is potential energy. The negative makes it point in direction of steepest descent for potential energy, because the object will move towards lower potential energy.
+
+\section{Maxwell's Equations}
+\begin{equation}
+	\vec{\nabla}\times \vec{B}=0
+\end{equation}
+\begin{equation}
+	\vec{\nabla}\times \vec{E}+\frac{\partial\vec{B}}{\partial t}=0
+\end{equation}
+\begin{equation}
+	\vec{\nabla}\cdot \vec{E}=\frac{\rho}{\varepsilon_0}
+\end{equation}
+\begin{equation}
+	\nabla \times \vec{B}=\varepsilon_0\mu_0\frac{0\partial\vec{E}}{\partial t}+\mu_0\vec{J}
+\end{equation}
+
+
+
+\section{Fourier Series}
+Consider a periodic function of period $ T $, that is
+\[f(t)=F(t+T).\] ex. 
+\[\sin\phi=\sin(\phi+2\pi).\] 
+or: (for a square wave)
+\[
+f(t)=
+\begin{cases}
+	1 & 0\leq t\leq \frac{T}{2}\\
+	0 & \frac{T}{2}\leq t<T
+\end{cases}\] 
+
+\subsection{The Fourier Series}
+
+Any periodic function can be described by a \textbf{Fourier Series}:
+\begin{equation}
+	F(t)=\frac{A}{2}+\sum_{n=1}^{\infty}\biggl[ A_{n}\cos\big( \frac{2\pi nt}{T}  \big)+B_{n}\sin\big(\frac{2\pi n t}{T}\big)	\biggr]
+\end{equation}
+also available in complex exponential form:
+\begin{equation}
+\sum_{n=-\infty}^{\infty}C_{n}e^{\frac{2\pi nt}{T}}
+\end{equation}
+
+These functions can recreate any periodic function upon finding their coefficients.
+\subsection{Fourier Series Coefficients}
+\begin{equation}
+	A_{m}=\frac{2}{T}\int_{0}^{T}F(t)\cos(\frac{2\pi m t}{T})dt
+\end{equation}
+\begin{equation}
+	B_{m}=\frac{2}{T}\int_{0}^{T}F(t)\sin(\frac{2\pi m t}{T})dt
+\end{equation}
+\begin{equation}
+	A_0=\frac{2}{T}\int_{0}^{T}F(t)dt
+\end{equation}
+
+
+\subsection{A note on even and odd functions}
+\subsubsection{Even Functions}
+Even functions can be defined by \[
+f(-x)=f(x).\] An examples is \[
+\cos(x).\] 
+Useful property:
+\[\int_{-a}^{a}f(x)dx=2\int_0^{a}f(x)dx.\] 
+\subsubsection{Odd Function}
+Odd functions are described by \[
+f(-x)=-f(x),\] for example \[
+\sin(x).\] 
+Useful Property:
+\[\int_{-a}^{a}f(x)dx=0.\] 
+\subsubsection{Even Odd function products}
+Products of even and odd functions follow the same rules as sums of even and odd numbers.
+Let $ f(x) $ be even and $ g(x) $ be odd,
+\[f(x)f(x)=\text{even},\quad f(x)g(x)=\text{odd},\quad g(x)g(x)=\text{even}.\] 
+
+\section{Fourier Transforms}
+\subsection{Periodic and non-periodic functions}
+
+Consider the Fourier Series:
+\[F(t)=\sum_{n=1}^{\infty}C_{n}e^{\frac{2 \pi i n t}{T}}=\sum_{n=1}^{\infty}C_{n}e^{2 \pi i n \nu t}.\] 
+Where 
+\[T=\frac{1}{\nu}.\] 
+and $ \nu $ represents frequency.
+A Fourier Series is a sum of sinusoids with periods $ T_{n}=\frac{T_0}{n} $ or frequencies $ n \nu_0 $.
+Non-periodic signals require $ T_0\to 0\ \&\ \nu_0\to_0 $. 
+\[F(t)=\sum_{n=1}^{\infty}C_{n}e^{2 \pi in \nu_0 t}\to\lim_{\nu_0\to 0}\sum_{n=1}^{\infty}C_{n}e^{2 \pi i n \nu_0 t}d\nu.\] 
+\subsection{Fourier Integral and Fourier Transform}
+\subsubsection{Fourier Integral}
+
+Fourier Integral: given a transform gives a Fourier Series
+\begin{equation}
+	F(t)=\int_{\infty}^{\infty}\Phi(\nu)e^{2 \pi i \nu t}d \nu
+\end{equation}
+Can be useful to compare what modifying $ F(t) $ does to its Fourier Transform, for examples $ F(t-\tau) $.
+
+\subsubsection{Fourier Transform}
+\begin{equation}
+	\Phi(\nu)=\int_{\infty}^{\infty}F(t)e^{-2 \pi i \nu t}dt
+\end{equation}
+
+\subsubsection{Note}
+$ F(t) $ and $ \Phi(\nu) $ contain the same info in different ways. They give information of \textbf{conjugate variables}, such as $ t\ \&\ \nu $, or $ x\ \&\ p $, position and momentum.
+
+An important property of Fourier Transforms relative to their original function is that in ways they are inverse of each other. A tall and narrow initial function yields a low and wide transform and vice versa. This is the cause of the \textbf{uncertainty principal}.
+
+\subsection{Important Functions and their transforms}
+\subsubsection{Normal (Gaussian)}
+\begin{equation}
+G(t)=\frac{1}{\sqrt{2 \pi}\sigma}e^{-\frac{1}{2}{(\frac{t-\mu}{\sigma})}^2}
+\end{equation}
+\begin{enumerate}
+	\item Where $ \mu $  is the mean and center 
+	\item $ \sigma $ is the standard deviation $ \frac{2}{3} $ of distribution are in a standard deviation
+	\item $ \frac{1}{\sigma\sqrt{2 \pi}} $ is a normalization so that $ \int_{-\infty}^{\infty}G(t)dt=1 $.
+\end{enumerate}
+\textbf{Fourier Transform:}
+\begin{equation}
+	g(\nu)=ae^{-\pi^2 \nu^2 a^2}\sqrt{\pi}
+\end{equation}
+This is a Gaussian as well. 
+
+\begin{itemize}
+	\item $ a $ is the standard deviation of $ G(t) $ 
+	\item $ \frac{1}{a} $ is the standard deviation of $ G(t) $ 
+\end{itemize}
+This is the principal of the uncertainty principle, as noted above.
+
+\section{Dirac Delta Function}
+\begin{equation}
+	f(x)=
+	\begin{cases}
+		0 & x\neq 0\\
+		\infty & x=0
+	\end{cases}
+\end{equation}
+and
+\begin{equation}
+	\int_{-\infty}^{\infty}\delta(x)=1
+\end{equation}
+Can be defined as Gaussian under the condition of $ \sigma \to\infty $. The Fourier Transform of $ \delta(x) $ would then be $ 1 $ from $ -\infty<x<\infty $.
+
+
+
+\section{Convolution}
+An integral that expresses amount of overlap of a function g as it is shifted over a function $ f $.
+\begin{equation}
+	\int_{\infty}^{\infty}f(\tau)g(t-\tau)d\tau=f*g
+\end{equation}
+ex. Dirac delta
+\begin{equation}
+	f*\delta=\int_{-\infty}^{\infty}f(\tau)\delta(t-\tau)d\tau=f(t)
+\end{equation}
+
+\subsection{Example: let both functions be rectangular pulses}
+\[
+g(t)=f(t)=
+\begin{cases}
+	A & -\frac{a}{2}<t\leq \frac{a}{2}\\
+	0 & \mbox{else}\end{cases}.\] 
+Convolution moves second function over first
+\[
+c(t)=f*f=\int_{-\infty}^{\infty}f(\tau)f(t-\tau)d\tau.\] 
+Integrand is $ 0 $ except when functions overlap, $ -a\leq t\leq a $ When $ -a\leq t\leq 0, c(t) $ is increasing. 0 everywhere except $ -\frac{a}{2}\leq\tau\leq t+\frac{a}{2} $.
+
+When $ 0\leq t\leq a, c(t) $ decreasing. Integrand is $ 0 $ except $ t- \frac{a}{2}\leq\tau\leq \frac{a}{2} $
+
+
+\begin{equation}
+	f*f=
+	\begin{cases}
+		A^2(t+a) & -a<t<0\\
+		A^2(a-t) & 0<t<a
+	\end{cases}
+\end{equation}
+
+\subsection{Convolution Theorem}
+Consider Fourier pairs $ F_1(t)\Leftrightarrow\Phi_1(\nu) \text{ and } F_2(t)\Leftrightarrow\Phi_2(\nu) $ the FT of the convolution of $ F_1+F_2 $ is the product of $ \Phi_1 + \Phi_2 $: 
+\begin{equation}
+	F_1*F_2\Leftrightarrow\Phi_1(\nu)\Phi_2(\nu)
+\end{equation}
+\subsubsection{Apply to Example}
+FT of rectangular pulse \[
+\Phi(\nu)=\frac{A}{\pi\nu}\sin(\phi\nu a).\] 
+Then FT of f*f is 
+\[ [\Phi(\nu)]=\frac{A^2}{\pi^2\nu^2}\sin(\pi\nu ).\] 
+Same functional form as FT of a triangle function from homework, constants may be different.
+
+So convolution theorem tells us that the convolution of a rectangular else with itself is the triangle function, as expected.
+
+\subsubsection{Example Application: Spectrometer}
+Diffraction grating separates light by wavelength
+
+
+Slit isn't infinitely narrow, so detector measures intensity for small range of $ \lambda $ How to find actual $ I(\lambda) $?
+
+Detector measures real data convolved with the slit (which tends to `smooth out real data').
+\[
+I_{\text{meas}}=I(\lambda)*f(\lambda).\] 
+Where $ I(\lambda) $ is real intensity, and $ f(\lambda) $ is the slit, rectangular function.
+
+Taking the fourier transform of both sides
+\[
+FT(I_{\text{meas}})=\underbrace{FT(I*f)=FT(I)FT(f)}_\text{conv.\ thm.}.\] 
+\[
+I=FT^{-1}\bigg[\frac{FT(I_{\text{meas}})}{FT(f)}\bigg].\] 
+This can then be used to remove the diffraction and find the install light emission.
+
+
+
+
+
+
+
+
+
+\end{document}
+

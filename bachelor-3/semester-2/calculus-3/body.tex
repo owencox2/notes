@@ -1,0 +1,885 @@
+\section{Sequences}
+
+\subsection{Sequence}
+\textbf{Sequence} ordered collection of numbers defined by function f. Usually denoted $a_{n}$.
+
+$a_{n}=f_{n}$ known as \textbf{terms}
+
+$n$ is the \textbf{sequence}
+
+\subsection{Converge and Divergence}
+if $\lim_{x\to\infty}f(x)$ exists, then $a_{n}=f(n)$ converges to the same limit
+
+\begin{equation}
+	\label{}
+\lim_{n\to\infty}a_{n}=\lim_{x\to\infty}f(x)	
+\end{equation}
+
+generally testing this is straightforward.
+
+\subsection{Function raised to a function- incomplete}
+
+\begin{equation}
+	\label{}
+\lim_{x\to\infty}	(1+\frac{a}{n})^{n}	
+\end{equation}
+take natural log, move exponent to coefficient, and find limit
+\begin{equation}
+	\label{}
+n\ln(1+\frac{a}{n}	)
+\end{equation}
+can be formatted as a fraction for L'Hopital's rule
+\begin{equation}
+	\label{}
+\frac{\ln(1+\frac{a}{n})}{\frac{1}{n}}	
+\end{equation}
+
+
+
+\begin{equation}
+	\label{}
+e^{n}	
+\end{equation}
+
+
+\subsection{Geometric sequence and series }
+for $a_{n}=cr^{n}$
+\begin{enumerate}
+	\item if $|r|<1$,
+	\item if $r>1$ then $\lim_{n\to\infty}a_{n}=\infty$
+	\item if $r=0$, $\lim_{n\to\infty}=0$
+\end{enumerate}
+
+\hfill
+\hfill
+
+
+\textbf{Geometric Series}
+
+
+
+\begin{enumerate}
+	\item if $|r|>1$, diverges
+	\item if $|r|<1$, converges to $a\frac{1}{1-r}$
+\end{enumerate}
+
+\subsection{trigonometric functions, divergence by oscillation}
+\begin{equation}
+	\label{}
+	\sin(x),\cos(x)
+\end{equation}
+diverge by \textbf{oscillation}
+
+\subsection{Squeeze Theorem}
+\begin{equation}
+	\label{}
+a_{n}=e^{-2n}\cos(n)
+\end{equation}
+squeezing $\cos(n)$;
+\begin{equation}
+	\label{}
+-1\leq \cos(n) \leq 1	
+\end{equation}
+\begin{equation}
+	\label{}
+-e^{-2n}\leq -e^{2n}\cos(n) \leq -3^{-2n}	
+\end{equation}
+because $-e^{2n}$ approaches 0 when  $\lim_{n\to\infty}$, the whole function converges
+
+\subsection{Bounded, Monotonic}
+\textbf{Bounded}, has a maximum or minimum value
+
+\textbf{Monotonic}, either increasing or decreasing.
+
+\begin{enumerate}	
+	\item If increasing and bounded above, converges.
+
+\item If decreasing and bounded below, converges.
+
+\item If converges, bounded
+\end{enumerate}
+
+To determine if a series is monotone, take derivative. This sometimes can indicate monotonicity.
+
+
+\section{Series}
+\subsection{series}
+
+\textbf{Series}, adding every term in a sequence.
+
+
+\[ \sum_{n=1}^{\infty} a_{n} \]
+
+$S_{n}$ corresponds to $a_{n}$, but rather than that place in the sequence, it is the sum of every previous term and that term in the series.
+
+
+Some have infinite sums were the answer approaches a value.
+
+\begin{equation}
+	\label{}
+	S_{n}= \sum_{n=1}^{\infty} 0.1^{n} \to 0.11111\ldots \to \frac{1}{9}
+\end{equation}
+
+Series can sometimes be written as sequences.
+
+\begin{equation}
+	\label{}
+S_{n}=\sum_{n=1}^{\infty} \frac{1}{4k^{2}-1}=\frac{n}{2n+1}	
+\end{equation}
+
+If the sequence of sums, $S_{n}$ diverges, then the series diverges.
+
+
+Intuition can be deceiving
+\begin{equation}
+	\label{}
+\sum_{n=1}^{\infty}\frac{1}{n}
+\end{equation}
+Diverges
+
+\subsection{Sum does not start at n=0}
+\begin{equation}
+	\label{}
+\sum_{k=2}^{\infty}a r^k	
+\end{equation}
+
+equivalent to
+
+\begin{equation}
+	\label{}	
+	\sum_{k=0}^{\infty}a r^{k+2}
+\end{equation}
+
+\subsection{Telescoping Series}
+A \textbf{telescoping series} is one in which the terms cancel. One is often left with an initial term and a final term that has not yet canceled. This latter will have n in it.\ not so if n goes to infinity.
+
+Some things don't look like they're telescoping but require partial fractions
+
+\subsection{Diverge and Integral Test}
+If $\sum_{n=1}^{\infty}a_{n}$ converges, then $ \lim_{n\to\infty} a_{k}=0$. Equivalently if $ \lim_{n\to\infty} a_{n}\neq 0 $, series diverges.
+
+If $\lim_{n\to\infty}\to0$, inconclusive. If $ \lim_{n\to\infty}=a\in\mathbb{R}$, converges
+
+
+
+\hfill
+
+
+\textbf{Integral Test} let $a_{n}=f_{n}$, where $f$ is positive, decreasing, and continuous. If $\int f(n)$ converges, $\sum_{n=1}^{\infty}a_{n}$ converges.
+
+Ex.
+\begin{equation}
+	\label{}
+\sum_{n=1}^{\infty}\frac{1}{n}
+\end{equation}
+
+make sure positive, decreasing, continuous 
+
+\begin{equation}
+	\label{}
+	\int_{1}^{\infty} \frac{1}{n}
+\end{equation}
+\begin{equation}
+	\label{}
+	\ln(n)|^{\infty}_{1}
+\end{equation}
+\begin{equation}
+	\label{}
+	\ln(\infty) - \ln(1) = \infty - 0
+\end{equation}
+diverges.
+
+\subsection{Convergence of the p-series}
+
+The p-series
+\begin{equation}
+	\label{}
+\sum_{n=1}^{\infty}\frac{1}{k^{p}}	
+\end{equation}
+converges when $p>1$ and diverges when $p\leq1$
+
+
+\subsection{Comparison Tests}
+Assume there exists $M>0$ such that $0\leq a_{n}\leq b_{n}$ for $n\geq M$. Past a certain value, $M$, b is forever greater than a.
+
+
+\begin{enumerate}
+	
+	\item if $\sum_{n=1}^{\infty}b_{n}$ converges, then $\sum_{n=1}^{\infty} a_{n}$ also converges.
+
+\item If $\sum_{n=1}^{\infty}a_{n}$ diverges, $\sum_{n=1}^{\infty}b_{n}$ also diverges
+\end{enumerate}
+
+\subsection{Limit Comparison}
+
+Let $a_{n},b_{n}$ be positive sequences. Assume the following limit exists:
+\begin{equation}
+	\label{}
+	L= \lim_{n\to\infty} \frac{a_{n}}{b_{n}}
+\end{equation}
+
+
+\begin{enumerate}
+	\item if $L>0$ then $\sum_{n=1}^{\infty} a_{n}$ converges iff $\sum_{n=1}^{\infty}b_{n}$ converges.	
+
+	\item if $L=\infty$ and $\sum a_{n}$ converges, then $\sum b_{n}$ converges.
+	
+
+	\item if $L=0$ and $\sum b_{n}$ converges, then $\sum a_{n}$ converges.
+
+\end{enumerate}
+
+
+\subsection{Alternating Series and Absolute Convergence}
+
+\textbf{Alternating Series}, a series whose terms switch between positive and negative
+\begin{equation}
+	\label{}
+	\sum_{n=1}^{\infty}(-1)^{n}b_{n} \mbox{, or } \sum_{n=1}^{\infty}(-1)^{n+1}b_{n}	
+\end{equation}
+for $b_{n}\geq 0$
+
+\textbf{Absolute Convergence} The series $\sum a_{n}$ \textbf{converges absolutely} if $\sum |a_{n}|$ converges.
+
+If $a_{n}$ has absolute convergence, $a_{n}$ converges
+
+\hfill
+\hfill
+
+\textbf{alternating series test}
+if $b_{n}$ is a positive sequence that is decreasing and converges to 0, then
+\begin{equation}
+	\label{}
+S=\sum_{n=1}^{\infty}(-1)^{n-1}b_{n}
+\end{equation}
+converges.
+
+\hfill
+
+
+Furthermore,
+\begin{equation}
+	\label{}
+	0<S<b_{1} \mbox{, and } S_{2N}<S<S_{2N}\mbox{, } N\geq 1	
+\end{equation}
+
+
+\subsection{Conditional Convergence}
+An infinite series $\sum a_{n}$ converges conditionally if $\sum a_{n}$ converges but $\sum |a_{n}|$ diverges.
+
+
+\subsection{Ratio and Root Tests}
+\textbf{Ratio Test} * good for factorials
+\begin{equation}
+	\label{}
+	\rho=\lim_{n\to\infty}|\frac{a_{n+1}}{a_{n}}|	
+\end{equation}
+
+\begin{enumerate}
+	\item if $\rho<1, \sum a_{n}$ converges absolutely
+	\item if $\rho>1,\sum a_{n}$ diverges
+	\item if $\rho=1$, the test is inconclusive
+\end{enumerate}
+\textbf{Root Test}
+\begin{equation}
+	\label{}
+	L=\lim_{n\to\infty}\sqrt[k]{|a_{n}|}
+\end{equation}
+
+
+\begin{enumerate}
+	\item if $L<1, \sum a_{n}$ converges absolutely
+	\item if $L>1,\sum a_{n}$ diverges
+	\item if $L=1$, the test is inconclusive
+\end{enumerate}
+
+\subsection{Convergence and Function Approximation. Power Series}
+Power series can sometimes be approximated by the less intensive solution to geometric series with $|r|<1$
+\begin{equation}
+	\label{}
+\frac{1}{1-x}=\sum_{n=1}^{\infty} x^{k}
+\end{equation}
+
+For
+\begin{equation}
+	\label{}
+	\sum_{n=0}^{\infty}{(ax-b)}^{n}	
+\end{equation}
+This approximation converges only when $|ax-b|<1$. Solving this and finding mid point can find the radius of convergence
+
+\hfill
+\hfill
+\hfill
+
+Not all power series have the form of a geometric series. Coefficients $c_{k}$ might not be the same for all terms. The \textbf{Ratio Test} is often useful in these situations.
+
+\begin{equation}
+	\label{}
+	a_{k}=\sum_{k=1}^{\infty} \frac{(x-7)^{k}}{k}	
+\end{equation}
+evaluate:
+\begin{equation}
+	\label{}
+L=\lim_{n\to\infty}|\frac{a_{k+1}}{a_{k}}|
+\end{equation}
+\begin{enumerate}
+	\item if $L<1$, convergence
+	\item if $L>1$, divergence
+	\item if $L=1$, inconclusive
+\end{enumerate}
+
+The values that make $L=1$ must be evaluated to find specific character
+
+
+\subsection{Taylor Series}
+
+\begin{equation}
+	\label{}
+P_{n}(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^{k}
+\end{equation}
+A Maclaurin series is a Taylor series centered at $x=0$
+
+
+
+\section{Polar, Cylindrical and Spherical Coordinates}
+
+In a rectangular coordinate system:
+a point at (x,y) has length r and is above the horizontal axis at $\theta$
+
+
+x and y can be represented
+\begin{equation}
+	\label{}
+x=r\cos\theta, y=r\sin\theta	
+\end{equation}
+and
+\begin{equation}
+	\label{}
+r^{2}=x^{2}+y^{2}	
+\end{equation}
+\begin{equation}
+	\label{}
+\tan\theta=\frac{y}{x}	
+\end{equation}
+
+\subsection{General Polar Equation Forms}
+\textbf{cardioid}
+\begin{equation}
+	\label{}	
+r=a(1\pm \cos\theta)
+\end{equation}
+\begin{equation}
+	\label{}
+r=a(1\pm\sin\theta)	
+\end{equation}
+\textbf{rose}
+\begin{equation}
+	\label{}
+r=a\cos(b\theta), r=a\sin(b\theta)	
+\end{equation}
+
+
+\subsection{Cylindrical and Spherical Coordinate Systems}
+
+\textbf{Cylindrical Coordinate Systems}, $P(x,y,z)$ is represented by $P(r,\theta,z)$.
+if
+\begin{equation}
+	\label{}
+z=r	
+\end{equation}
+A cone has been formed.
+
+\textbf{Spherical Coordinates}
+$P(\rho,\theta,\phi)$
+\begin{enumerate}
+	\item $\rho$ is the distance between P and origin.
+	\item $\theta$ is the angle used in cylindrical or polar coordinates
+	\item $\phi$ is the angle between the z axis and the line segment OP, where  is the origin and $0\leq\phi\leq\pi$
+\end{enumerate}
+
+\subsection{Between spherical, cylindrical, and rectangular coordinates}
+
+\begin{equation}
+	\label{}
+x=\rho\sin\phi\cos\theta	
+\end{equation}
+
+
+\begin{equation}
+	\label{}
+y=\rho\sin\phi\sin\theta	
+\end{equation}
+
+\begin{equation}
+	\label{}
+z=\rho\cos\phi	
+\end{equation}
+
+\begin{equation}
+	\label{}
+	\sqrt{x^{2}	+y^{2}}=\rho\sin\phi
+\end{equation}
+
+
+and
+
+\begin{equation}
+	\label{}
+	\rho^{2}=x^{2}+y^{2}+z^{2}
+\end{equation}
+\begin{equation}
+	\label{}
+\tan\theta=\frac{y}{x}	
+\end{equation}
+\begin{equation}
+	\label{}
+	\phi=\arccos\big(\frac{z}{\sqrt{x^{2}+y^{2}+z^{2}}}	\big)
+\end{equation}
+
+Relationship between cylindrical and spherical coordinates
+
+\begin{equation}
+	\label{}
+r=\rho\sin\phi
+\end{equation}
+\begin{equation}
+	\label{}
+\theta=\theta	
+\end{equation}
+\begin{equation}
+	\label{}
+z=\rho\cos\phi	
+\end{equation}
+and
+\begin{equation}
+	\label{}
+	\rho=\sqrt{r^{2}+z^{2}}
+\end{equation}
+\begin{equation}
+	\label{}
+	\phi=\arccos\big(\frac{z}{\sqrt{r^{2}+z^{2}}}\big)	
+\end{equation}
+
+\section{Vectors}
+\begin{equation}
+	\label{}
+r(t)=f(t)i+g(t)j= \langle f(t),g(t)\rangle
+\end{equation}
+This makes a function. Following the vector across $t$ makes its own curve.
+
+\textbf{Initial point:} $(x_{0},y_{0})$.
+
+
+\textbf{Terminal point:} $(x_{1},y_{1})$
+
+A vector is in \textbf{standard position} if the initial point is at the origin When graphing we usually graph vectors in the domain of the function in standard position
+
+
+A \textbf{plane curve} is created by a function of $\hat{i},\hat{j}$
+
+A \textbf{space curve} is created by a function of $\hat{i},\hat{j},\hat{k}$
+
+
+\subsection{Parametrization Parametric}
+Line segment
+\begin{equation}
+	\label{}
+	<x_{1}+t(x_{2}-x_{1}),y_{1}+t(y_{2}-y_{1})>	
+\end{equation}
+Circle
+\begin{equation}
+	\label{}
+<r\cos t,r\sin t>	
+\end{equation}
+
+
+\subsection{Differentiating and operating on Vector Valued Functions}
+
+Differentiating a vector value function at a point gives a tangent vector at that point
+\begin{equation}
+	\label{}
+r(t)=f(t)i+g(t)j	
+\end{equation}
+\begin{equation}
+	\label{}
+r'(t)=f'(t)i+g'(t)j	
+\end{equation}
+
+\textbf{dot product}: given $(x_{1},y_{1})$ and $(x_{2},y_{2})$
+\begin{equation}
+	\label{}
+u\dot v = x_{1}x_{2}+y_{1}y_{2}
+\end{equation}	
+
+\textbf{cross product:} say $u_{1}=(a_{1},a_{2},a_{3})$, and $v_{1}=(b_{1},b_{2},b_{3})$. Magnitude of cross product is area bounded by vectors.
+\begin{equation}
+	\label{}
+\begin{bmatrix}
+	i&j&k\\
+	a1&a2&a3\\
+	b1&b2&b3
+\end{bmatrix}	
+\end{equation}
+\begin{equation}
+	\label{}
+	u \times  v=(a2b3-b2a3)i - (a1b3-b1a3)j + (a1b2-b1a2)k
+\end{equation}
+
+
+
+\subsection{Length of a Vector Valued Function}
+fr $r(t)=f(t)i+g(t)j\cdots +z(t)z$
+\begin{equation}
+	\label{}
+	\int\sqrt{f'(t)^{2}+g'(t)^{2}\cdots +z'(t)^{2}}dt=\int ||r'(t)||dt
+\end{equation}
+
+\textbf{Arclength Function}
+
+
+\begin{equation}
+	\label{}	
+s(t)=\int ||r'(u)||du
+\end{equation}
+
+\begin{equation}
+	\label{}	
+\frac{ds}{dt}
+\end{equation}
+
+
+\subsection{Unit Tangent Vector}
+\begin{equation}
+	\label{}
+T(t)=\frac{r'(t)}{||r'(t)||}	
+\end{equation}
+
+
+
+\subsection{Curvature}
+often measured in relation to \textbf{radius of curvature.} If a circle where overlaid at that point, what would the radius be to match the curve.
+\begin{equation}
+	\label{}
+	\kappa=\frac{||T'(t)||}{||r'(t)||}=\frac{|y''|}{[1+(y')^{2}]^{\frac{3}{2}}}=||\frac{dT}{ds}||=||T'(s)||
+\end{equation}
+\begin{equation}
+	\label{}
+	\kappa=\frac{||r'(x)\times r''(x)||}{||r'(x)||}
+\end{equation}
+
+\subsection{Principal Unit Normal Vector and Binormal Vector}
+\textbf{Principal Unit Normal Vector:} vector of length one perpendicular to curve at a point.
+\begin{equation}
+	\label{}
+N(t)=\frac{T'(t)}{||T'(t)||}	
+\end{equation}
+\textbf{Binormal Vector} is orthogonal to $T$ and $N$
+
+
+\begin{equation}
+	\label{}
+T(t)\times N(t)	
+\end{equation}
+\begin{equation}
+	\label{}
+||B||=||T \times N||=||T||||N||\sin\theta=1	
+\end{equation}
+
+
+\subsection{Acceleration}
+\begin{equation}
+	\label{}
+	a(t)=v'(t)\cdot T(t) + [v(t)]^{2}\cdot\kappa\cdot N(t)	
+\end{equation}
+
+\section{Integrals}
+for $f$ continuous on a rectangular region $a\leq x\leq b$ and $c\leq y\leq d$. Either order of standard double integration will work
+\begin{equation}
+	\label{}
+\iint f(x,y)dA=\lim_{m,n\to\infty}\sum^{m}_{i=1}\sum^{n}_{j=1}f(x,y)
+\end{equation}
+\begin{equation}
+	\label{}
+	\mbox{Volume}=\int A(x)dx	
+\end{equation}
+with $A(x)$ being a function for area, $A(x)=\int f(x)dy$
+
+
+\subsection{Non-rectangular}
+Some shapes are bounded by two functions. If they are functions of x, initially integrate with respect to y, with the functions as the bounds of the integral.
+
+
+Let $R$ be a regin bounded below and above by the graphs of their continuous functions $y=g(x)$ and $y=h(x)$, and by the lines a=x and x=b. If $f$ is continuous of $R$, then
+\begin{equation}
+	\label{}
+\iint f(x,y)dA=\iint f(x,y)dx dy	
+\end{equation}
+
+\subsection{2 functions}
+
+\begin{equation}
+	\label{}	
+\iint g(x,y)-f(x,y)A
+\end{equation}
+
+use the intersection of these forms projected on xy axis as the bounds of integrals.
+
+\subsection{Integration with Polar Coordinates}
+
+$R={(r,\theta) : 0\leq a \leq r \leq b, \alpha \leq\theta\leq\beta}$
+\begin{equation}
+	\label{}	
+\iint f(r,\theta)dA=\int_{\alpha}^{\beta}\int_{a}^{b} f(r,\theta) \cdot r dr d\theta
+\end{equation}
+where $f(r,\theta)$ is z
+
+This can be used for overlapping circles and a lot of other things. The main difference being the bounds of the integrals. One may have to ad further integrated integrals
+
+\subsection{Triple integrals}
+
+\begin{equation}
+	\label{}	
+\iiint f(x,y,z)dV
+\end{equation}
+
+\subsection{Triple Integrals in Cylindrical and Spherical Coordinates}
+
+\begin{equation}
+	\label{}	
+	\Delta V=\rho^{2} \sin\phi\cdot d\rho\cdot d\phi\cdot d\theta
+\end{equation}
+\begin{equation}
+	\label{}
+\iiint=f(\rho,\theta,\phi)\rho^{2}\sin\phi
+\end{equation}
+
+\section{Vector Fields}
+
+insane. Can be used to model all sorts of fields. 
+
+
+
+A vector field $F$ in $\mathbb{R}^{n}$ is an assignment of an n dimensional vector $F(x,y,etc)$ t each point of a subset $D$ in $\mathbb{R}$
+
+A vector field is \textbf{continuous} if both components are continuous. 
+
+\hfill
+
+two kinds of vector fields. In a \textbf{radial field} all vectors either point toward or away from the origin
+
+\hfill
+
+\textbf{Rotational field} is tangent t a circle with radius $r=\sqrt{x^{2}+y^{2}}$. \textbf{Dot Product} is zero.
+
+\hfill
+\hfill
+
+a \textbf{Unit vector field} is a field in which every vector has magnitude 1. 
+
+\subsection{Normalizing a Vector field}
+
+\begin{equation}
+	\label{}
+	F=<P,Q,R>
+\end{equation}
+unit field:
+\begin{equation}
+	\label{}
+	\frac{F}{||F||}
+\end{equation}
+
+\subsection{Gradient}
+
+\begin{equation}
+	\label{}
+	\mbox{grad}f=\nabla f=<f'x,f'y>	
+\end{equation}
+
+A field is a \textbf{gradient field} or \textbf{conservative vector field} if there is a single scalar function f such that $\nabla f=F$ f must be a function where if differentiated for each component $(x,y,etc,)$, it yields the components of F in accordance to variable differentiated for.
+
+\hfill
+\hfill
+
+$f$ is called a \textbf{potential function}
+
+
+\textbf{Cross Partial Property of Conservative Vector fields}
+
+If $F(x,y)=\langle P(x,y),Q(x,y)\rangle$ is a conservative vector field then $\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$. 
+
+
+\hfill
+
+This can be used to show a field is conservative, not vice versa.
+
+
+\subsection{Vector Line Integral}
+the \textbf{Vector Line Integral} of a vector field $F$ along an oriented smooth curve $C$ is 
+\begin{equation}
+	\label{}
+\int_{C}F \cdot T ds = F(r(t)) \cdot \frac{r'(t)}{||r'(t)||}\cdot ||r'(t)||dt
+\end{equation}
+\begin{equation}
+	\label{}
+	\int_{C}=F\cdot Tds = \int_{a}^{b}F(r(t))\cdot r'(t)dr
+\end{equation}
+\begin{equation}
+	\label{}
+\int_{C}F\cdot T ds = \int_{C}F\cdot dr	
+\end{equation}
+
+\textbf{Piecewise Smooth Function}
+a function made of a finite number of smooth curves
+
+\begin{equation}
+	\label{}
+\sum_{m=1}^{n}	\int_{C_{m}}F\cdot ds
+\end{equation}
+
+
+\subsection{Flux}
+\begin{equation}
+	\label{}
+\int_{C}F\cdot N ds	
+\end{equation}
+
+\begin{equation}
+	\label{}
+\int_{C}F(r(t))\cdot n(t)dt	
+\end{equation}
+All these variables are vectors
+
+
+\begin{equation}
+	\label{}
+n=<y',-x'>	
+\end{equation}
+
+\subsection{Circulation}
+Circulation of F along C: line integral of F along oriented \textbf{closed} curve
+
+\begin{equation}
+	\label{}
+\oint_{C}F\cdot T ds	
+\end{equation}
+
+\begin{equation}
+	\label{}
+\int F(r(t))\cdot r'(t)	
+\end{equation}
+
+\textbf{Simple Curves} do not cross themselves.
+
+A region D is a \textbf{connected region} for any two points if there is a path where the trace is entirely within D. A region is \textbf{simply connected} if you can shrink it to a straight line. If there is a hole/excepted area within the region it is not simply connected.
+
+\subsection{Fundamental Theorem for Line Integrals}
+C must be a piecewise smooth curve
+
+\begin{equation}
+	\label{}
+\int_{C}\nabla f \cdot dr = f(r(b))-f(r(a))	
+\end{equation}
+
+
+\textbf{Gradient fields} are \textbf{path independent}
+
+\subsection{Green's Theorem}
+
+Let D be an open, simply connected region with a boundary curve C that is piecewise smooth, simple closed curve oriented counterclockwise. Only for 2 dimensional vector fields.
+\begin{equation}
+	\label{}
+	\oint_{C}F\cdot dr = \oint_{c}Pdx+Qdx = \iint_{D}(Q_{x}-P_{y})dA=\int_{C}=F\cdot T ds
+\end{equation}
+\begin{equation}
+	\label{}
+\iint_{D}(Q_{X}-P_{y})dA	
+\end{equation}
+
+Given an equation that satisfies, identify P, which is with $dx$, and Q, which is with $dy$, and then put them in the form. If it is going clockwise, make it negative.
+
+\hfill
+
+If $Q_{x}-P_{y}$=1, $dA$ is integrated and is equal to the initial integral.
+
+\hfill
+\hfill
+
+\subsection{Parametrize an Ellipse}
+\begin{equation}
+	\label{}
+<a\cos t,b\sin t>	
+\end{equation}
+with a as top radius in x, b top radius in y
+
+\subsection{Flux Form of Green's Theorem}
+
+Let D be an open, simply connected region with a boundary curve C that is piecewise smooth, simple closed curve oriented counterclockwise. Only for 2 dimensional vector fields.
+\begin{equation}
+	\label{}
+\oint_{C}F\cdot N ds = \iint_{D}(P_{x}+Q_{y})dA	
+\end{equation}
+
+
+\subsection{Harmonic functions}
+
+A \textbf{source free vector field} is a conservative field but with flux instead.
+
+
+\hfill
+\hfill
+
+Conservative and source free vector fields on simply connected domain: any potential function satisfied Laplace's Equation: $f_{xx}+f_{yy}=0$. $f$ is a harmonic function.
+
+\subsection{Non simply connected regions}
+Split the integrals up until they are simply connected
+
+
+
+\subsection{Divergence}
+Divergence measures the `genesis' of a certain point, $div F(x,y)$. Divergence is negative if it `flows in', and positive if its generative
+
+
+\subsection{Gradient Operator}
+\begin{equation}
+	\label{}
+
+\nabla=<\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}>
+\end{equation}
+\begin{equation}
+	\label{}
+	\mbox{div}F=\nabla \cdot F	
+\end{equation}
+
+Let $F=<P,Q>$ be a simply connected vector field.
+\begin{equation}
+	\label{}
+	\mbox{div}F=0	
+\end{equation}
+\textbf{iff} $F$ is source-free
+
+\subsection{Curl}
+for $F=<P,Q,R>$, a vector field whose component derivatives all exist,
+\begin{equation}
+	\label{}
+	\mbox{curl}F=\nabla \times  F	
+\end{equation}
+\begin{equation}
+	\label{}
+\begin{bmatrix}
+	i&&j&&k\\
+	\frac{\partial}{\partial x}&&\frac{\partial}{\partial y}&&\frac{\partial}{\partial z}\\
+	P&&Q&&R
+\end{bmatrix}	
+\end{equation}
+
+\begin{equation}
+	\label{}
+	\mbox{div (curl (F))}=0	
+\end{equation}
+
+for a conservative vector field curl$F=0$
+
+
+divergence of a gradient is 0
+\end{document} 
+

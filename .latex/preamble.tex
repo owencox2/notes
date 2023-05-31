@@ -1,0 +1,51 @@
+%Text body width
+\newlength{\alphabet}
+\settowidth{\alphabet}{\normalfont abcdefghijklmnopqrstuvwxyz}
+\usepackage[textwidth=2.3\alphabet]{geometry}
+
+\usepackage{parskip}
+
+%Font
+\usepackage{libertine}
+
+% Only use the math font of mathpazo
+\usepackage{mathpazo}
+
+%% "Proper" small caps
+\newcommand{\flatcaps}[1]{\textsc{\MakeLowercase{#1}}}
+%% 'compact' reduces the space above and below headings to a single blank line
+\usepackage[compact]{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+%% Upright (normal) numbers here
+\titleformat{\subsection}{\large}{\thesubsection}{.6em}{\flatcaps}
+%% Below, both heading should form sentences
+\titleformat{\subsubsection}{}{\thesubsubsection}{.6em}{}
+\titleformat{\paragraph}[runin]{\flatcaps}{\theparagraph}{0pt}{}
+
+
+
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+
+
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+
+% Theorems
+\usepackage{mdframed}
+
+
+\pdfsuppresswarningpagegroup=1

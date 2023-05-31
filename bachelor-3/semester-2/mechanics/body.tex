@@ -1,0 +1,549 @@
+\section{Newton's Laws}
+
+
+
+\begin{enumerate}
+	\item If $\vec F=0$, and $\vec v$ is constant, then the reference frame is \textbf{inertial}
+	
+	\item In \textbf{inertial frames}
+		$\vec{F}=m\frac{d\vec{}v}{dt}$, where $\vec{p}=mv$. $F=\frac{d\vec{p}}{dt}$
+	\item $\vec{F_{21}}=-\vec{F_{12}}$
+\end{enumerate}
+
+It is often useful to use this form for when mass is changing.
+\begin{equation}
+	\label{}
+	F=\frac{d\vec{p}}{dt}	
+\end{equation}
+
+
+
+For derivative notation:
+
+
+\begin{equation}
+	\label{}
+	\vec F=m\ddot{\vec{r}}
+\end{equation}
+\begin{equation}
+	\label{}
+	F_{x}=m\ddot{x}=m\frac{d^{2}x}{dt^{2}}	
+\end{equation}
+same is true for y and z.
+
+
+For these equations a number of initial conditions are required to solve the problems. Initial velocity and position.
+
+\subsection{Inertial and Non-Inertial Reference frames}
+in any large-scale earth-based problem, there is not an inertial reference frame due to the curvature and \textbf{rotation} of the earth and the force of gravity. These laws as written do not quite apply.
+
+\subsection{Galilean Transformation}
+from (x,y,z) to (x',y',z') moving with velocity v relative to (x,y,z)
+\begin{enumerate}
+	\item $x=x'-v_{x}t$
+	\item $y=y'-v_{y}t$
+	\item $z=z'-v_{z}t$
+\end{enumerate}
+
+
+
+acceleration is invariant under Galilean transformation
+
+\hfill
+\hfill
+
+In modern physics, the approach is to first define \textbf{invariant properties}, which then determines what the physics is. From acceleration is invariant under Galilean transformation, Newton's laws can be determined.
+
+
+
+\subsection{Polar Coordinates}
+
+\begin{equation}
+	\label{}
+	\vec{v}\equiv \vec{\dot{r}}=\dot{r}\hat{r}+r\dot{\phi}\hat{\phi}	
+\end{equation}
+\begin{equation}
+	\label{}	
+	\vec{a}\equiv \vec{\ddot{r}}=(\ddot{r}-r\dot{\phi^{2}})\hat{r}+(r\ddot{\phi}+2\dot{r}\dot{\phi})\hat{\phi}
+\end{equation}
+
+For solving force of tension on string of ball with uniform circular motion. 
+
+
+\subsection{Note: Technique for solving differential equations:}
+
+For
+\begin{equation}
+	\label{}
+\frac{df}{dt}=f	
+\end{equation}
+\begin{equation}
+	\label{}
+\int\frac{1}{f}df=\int dt	
+\end{equation}
+and so on, solving for f.
+
+\subsection{Drag}
+\begin{equation}
+	\label{}
+f(v)=bv+cv^{2}	
+\end{equation}
+\begin{equation}
+	\label{}
+	\vec{f}=-f(v)\hat{v}	
+\end{equation}
+\begin{equation}
+	\label{}
+V_{ter}=\frac{mg}{b}	,	
+\tau=\frac{m}{b},
+V_{ter}=\sqrt{\frac{mg}{c}}
+\end{equation}
+
+\section{Conservation}
+\textbf{Conservation: } does not change with respect to time.
+
+\begin{enumerate}
+	\item Momentum is conserved under no net forces
+	\item Energy is conserved if you keep track of it \textbf{all}
+	\item Angular momentum is conserved under no net torque
+	\item charge is conserved if you keep track of it all
+\end{enumerate}
+
+\subsection{Energy}
+\begin{equation}
+	\label{kenergy}
+	T=\frac{1}{2}mv^{2}
+\end{equation}
+\begin{equation}
+	\label{}
+	\frac{dT}{dt}=\vec{F}\cdot\vec{v}=\vec{F}\cdot\frac{d\vec{r}}{dt}
+\end{equation}
+\begin{equation}
+	\label{}
+	dT=\vec{F}\cdot d\vec{r}
+\end{equation}
+\begin{equation}
+	\label{}
+	dT=\sum_{i}\vec{F}_{i}\cdot d\vec{r}	
+\end{equation}
+\begin{equation}
+	\label{}
+	dW_{i}=\vec{F_{i}}\cdot d\vec{r}
+\end{equation}
+
+If W done by force $\vec{F}$ is path dependent then nonconservative.
+\begin{equation}
+	\label{}
+	W=\int_{C}\vec{F}\cdot d\vec{r}
+\end{equation}
+\begin{equation}
+	\label{}
+	\nabla \times \vec{F} =0
+\end{equation}
+in a conservative field
+\begin{equation}
+	\label{}
+	\vec{F}=-\nabla U
+\end{equation}
+
+\subsection{Stoke's Theorem}
+\begin{equation}
+	\label{}
+	\oint\vec{F}\cdot d\vec{r}=\int\nabla \times \vec{F}\cdot d\vec{A}
+\end{equation}
+
+If curl (f), force is conservative.
+
+\hfill
+\hfill
+
+If force is conservative every point has a unique value that is path independent
+
+U (x) is the \textbf{potential function} (see calc notes)
+
+\subsection{Momentum chapter equations}
+Rockets
+\begin{equation}
+	\label{}
+	m\dot{v}=-\dot{m}v_{ex}+F^{ext}
+\end{equation}
+Center of Mass
+\begin{equation}
+	\label{}
+	R=\frac{1}{M}\sum_{\alpha=1}^{N}m_{\alpha}r_{\alpha}
+\end{equation}
+Angular Momentum
+\begin{equation}
+	\label{}
+	l=r \times p
+\end{equation}
+\begin{equation}
+	\label{}
+	\dot{\phi}=\omega=\frac{l}{mr^{2}},\quad l=\omega mr^{2}=\dot{\phi}mr^{2}
+\end{equation}
+
+
+\subsection{General Solution for a 1 dimensional problem}
+\begin{equation}
+	\label{}
+	\int_{s_{0}}^{s}\frac{ds}{\sqrt{2[\frac{E}{m}-\frac{1}{m}U(s)]}}=\int_{t_{0}}^{t}dt
+\end{equation}
+Graphing the potential curve $U(S)$ gives information of how the system will react. Graphing total mechanical energy, the intersection are the \textbf{turning points.} \textbf{Equilibria points} are when $\frac{dU}{ds}=0$.
+If $\frac{d^{2}}{ds^{2}}>0$, system is stable. If $\frac{d^{2}U}{ds^{2}}<0$, system is unstable, and will readily go to the lower state.
+
+\hfill
+\hfill
+
+For a force $\vec{F}=-\nabla U(r,\theta,\phi)$ where the theta and phi components are zero, the system is \textbf{spherically symmetrical}, and it can be considered a \textbf{one-dimensional problem}. $\vec{F}$ reduces to $\vec{F}=-\frac{dU}{dr}\hat{r}$, known as a \textbf{central force}. 
+
+\subsection{Force Law}
+\begin{equation}
+	\label{}
+	\vec{F}=\alpha \frac{\hat{r}}{r}
+\end{equation}
+
+
+\subsection{Note on grad function in spherical coordinates}
+\begin{equation}
+	\label{}
+	\nabla f =\hat{r}\frac{\partial{f}}{\partial{r}}+\hat{\theta}\frac{1}{r}\frac{\partial{f}}{\partial{\theta}}+\hat{\phi}\frac{1}{r\sin{\theta}}\frac{\partial{f}}{\partial{\phi}}
+\end{equation}
+
+\subsection{Total Work}
+\begin{equation}
+	\label{}
+	W_{tot}=-dU
+\end{equation}
+\begin{equation}
+	\label{}
+d(T+U=0),\quad E=T+U=T_{1}+T_{2}+U
+\end{equation}
+
+\textbf{question for class } hat does it mean to take the gradient with respect to each particles coordinates?
+
+\begin{equation}
+	\label{}
+	-\nabla_{\alpha}U=F_{\mbox{net on }\alpha}	
+\end{equation}
+
+\section{Simple Harmonic Motion}
+
+If $\frac{\omega_{x}}{\omega_{y}}$ is a rational number, fraction of integers, the orbit is \textbf{closed}.
+\begin{equation}
+	\label{}
+	F=m\ddot{x}
+\end{equation}
+\begin{equation}
+	\label{}
+	m\ddot{x}+2\beta\dot{x}+\omega_{0}^{2}+\frac{F(t)}{m},\quad \frac{F(t)}{m}=f(m)
+\end{equation}
+\begin{equation}
+	\label{}
+	\beta=\frac{b}{2m},\quad \omega_{0}=\sqrt{\frac{k}{m}} 
+\end{equation}
+If $f(t)=0$
+\begin{equation}
+	\label{}
+	x(t)=C_{1}e^{r_{1}t}+C_{2}e^{r_{2}t},\quad r_{1},r_{2}\in\mathbb{R}
+\end{equation}
+\begin{equation}
+	\label{}
+	r_{1}=-\beta+{\sqrt{\beta^{2}-\omega_{0}^{2}}}
+\end{equation}
+\begin{equation}
+	\label{}	
+	r_{2}=-\beta-{\sqrt{\beta^{2}-\omega_{0}^{2}}}
+\end{equation}
+
+
+\subsection{Damping}
+
+
+for $\beta>\omega_{0}$ system is \textbf{over damped}, for $w_{0}>\beta$ oscillator is \textbf{under damped}, and if $\omega_{0}=\beta$ the oscillator is \textbf{critically damped.}
+
+\hfill
+\hfill
+
+Under Damped
+\begin{equation}
+	\label{}
+	x(t)=C_{1}e^{r_{1}t}+C_{2}e^{r_{2}t},\quad r_{1},r_{2}\in\mathbb{R}
+\end{equation}
+Under Damped
+\begin{equation}
+	\label{}
+x(t)=Ae^{-\beta t}\cos(\omega_{1}t+\delta)
+\end{equation}
+\begin{equation}
+	\label{}
+	\omega_{1}=\sqrt{\omega_{0}^{2}-\beta^{2}}
+\end{equation}
+Critically Damped
+\begin{equation}
+	\label{}
+	x(t)=C_{1}e^{-\beta t}+C_{2}te^{-\beta t}
+\end{equation}
+
+
+\subsection{Driven Under damped Oscillations}
+define
+\begin{equation}
+	\label{}
+D=\frac{d^{2}}{dt^{^2}}+2\beta \frac{d}{dt}+\omega_{0}^{2}
+\end{equation}
+
+
+\section{Hamiltonian Mechanics}
+\begin{equation}
+	\label{}
+	S=\int_{t_{1}}^{t}\mathcal{L}dt 
+\end{equation}
+This is \textbf{Hamilton's Principal.}
+With S being action and $\mathcal{L}$ being the Lagrangian. Motion will follow the path that \textbf{minimizes} this integral.  
+
+\begin{equation}
+	\label{}
+	\mathcal{L}=T-U=\frac{1}{2}m\dot{x}^{2}-U(x)
+\end{equation}
+\begin{equation}
+	\label{}
+	\mathcal{L}=\mathcal{L}(x,\dot{x},t)
+\end{equation}
+\begin{equation}
+	\label{}
+	S(x)=\int_{t_{1}}^{t_{2}}\mathcal{L}(x+\alpha\eta,\dot{x}\alpha\dot{\eta},t)
+\end{equation}
+\begin{equation}
+	\label{}
+	\delta S = \frac{dS(\alpha)}{d\alpha}\bigg|_{\alpha\to 0}=\lim\int_{t_{1}}^{t_{2}}\bigg(\frac{\partial\mathcal{L}}{\partial(x)}\eta +\frac{\partial \mathcal{L}}{\partial(\dot{x})}\dot{\eta}\bigg)dt
+\end{equation}
+Integrated by parts
+\subsection{Euler Lagrange Equation}
+This one is usually used.
+\begin{equation}
+	\label{//}
+	\frac{\partial\mathcal{L}}{\partial x}-\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial{\dot{x}}}=0
+\end{equation}
+
+\subsection{Line Elements}
+\begin{equation}
+	\label{}
+	ds=\sqrt{d\hat{r}\cdot d\hat{r}}
+\end{equation}
+
+\textbf{Spherical Polar}
+\begin{equation}
+	\label{}
+	d\vec{r}=dr\hat{r}+rd\theta\hat{\theta}+r\sin\theta d\phi\hat{\phi}	
+\end{equation}
+
+\textbf{Cylindrical}
+\begin{equation}
+	\label{}
+	d\hat{r}=d\rho\hat{\rho}+\rho d\phi\hat{\phi}+dz\hat{z}
+\end{equation}
+
+\textbf{Polar}
+\begin{equation}
+	\label{}
+	d\hat{r}=dr\hat{r}+rd\theta\hat{\theta}
+\end{equation}
+\subsection{Cyclic and ignorable general coordinates}
+for general coordinates:
+\begin{equation}
+	\label{}
+	\frac{\partial\mathcal{L}}{q_{i}}=\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{q_{i}}}
+\end{equation}
+when $\frac{\partial\mathcal{L}}{\partial q_{i}}=0$, $q_{i}$ is a \textbf{cyclic} or \textbf{ignorable general coordinate.} This $\frac{\partial\mathcal{L}}{\partial \dot{q_{i}}}$ is then a constant, let integration and derivation follow.
+
+\subsection{Finding the Lagrangian/Conservation}
+\textbf{Translational Invariance: } $x\to x+\epsilon$, $\mathcal{L}(x+\epsilon,\dot{x},t)=\mathcal{L}(x,\dot{x},t)$, where $\epsilon$ is a small transformation. That momentum is conserved follows.
+\begin{equation}
+	\label{}
+	\delta\mathcal{L}\equiv\mathcal{L}(x+\epsilon,\dot{x},t)-\mathcal{L}(x,\dot{x},t)=0
+\end{equation}
+
+\textbf{Time Translation: } $t\to t+\delta t$.
+\begin{equation}
+	\label{}
+	\delta\mathcal{L}=0=\frac{\partial\mathcal{L}}{\partial t}\delta t,\quad \frac{\partial\mathcal{L}}{\partial t}=0
+\end{equation}
+\begin{equation}
+	\label{}
+	\frac{d\mathcal{L}}{dt}=\frac{\partial\mathcal{L}}{\partial x}\frac{dx}{dt}+\frac{\partial\mathcal{L}}{\partial\dot{x}}\frac{d\dot{x}}{dt}+\frac{\partial\mathcal{L}}{\partial t}
+\end{equation}
+reduces to
+\begin{equation}
+	\label{}
+	\frac{\partial\mathcal{L}}{\partial t}=\frac{d}{dt}(p\dot{x}-\mathcal{L})
+\end{equation}
+
+\begin{equation}
+	\label{}
+	\mathcal{H}=\frac{\partial\mathcal{L}}{\partial \dot{q_{i}}}\dot{x}-\mathcal{L}
+\end{equation}
+In simple cases the Hamiltonian, $\mathcal{H}$, is the total energy of the system, but not always. It's often a first order differential equation, which is relatively easy to solve. If the Hamiltonian is conserved it gives a convenient way of solving the problem. 
+
+\begin{enumerate}
+	\item Write down $T and U\to\mathcal{L}=T-U$
+	\item Pick out generalized coordinates consistent with constraints
+	\item Write Lagrangian in generalized coordinates
+	\item Identify any cyclic coordinates
+		\begin{enumerate}
+			\item If $\frac{\partial\mathcal{L}}{\partial t}=0$, find $\mathcal{H}	$
+		\end{enumerate}
+	\item Use Euler-Lagrange
+\end{enumerate}
+
+\section{Two Body Central Force Problems}
+
+Two masses, $m_{1},m_{2}$. Only force is the force between them. Only force is the conservative and central force from and between both bodies. 
+
+For forces like gravity and the Coulomb force the potential is a function of the magnitude of the vector between the two bodies, $|r_{1}-r_{2}|$. For potentials such as these, they are \textbf{translational invariants}. It is convenient to represent $|r_{1}-r_{2}$ as $\vec{r}$, the relative position.
+
+\hfill
+\hfill
+
+\textbf{r}  is then used as one of our coordinates. Center of Mass is the other we will use,
+\begin{equation}
+	\label{}
+	R=\frac{m_{1}r_{1}+m_{2}r_{2}}{m_{1}+m_{2}},\quad M=m_{1}+m_{2}
+\end{equation}
+The momentum of the system
+\begin{equation}
+	\label{}
+	P=M\dot{R}=0
+\end{equation}
+Is conserved, and therefore constant, and we can chose a reference frame in which it as at rest and equals zero. The \textbf{reduced mass} is a useful parameter.
+\begin{equation}
+	\label{}
+	\mu=\frac{m_{1}m_{2}}{M}
+\end{equation}
+this allows us to write
+\begin{equation}
+	\label{}
+	T=\frac{1}{2}M\dot{R}^{2}+\frac{1}{2}\mu\dot{r}^{2}
+\end{equation}
+This shows that the kinetic energy is equivalent to a fictitious system with two particles, one  of mass M moving at the speed of the center of mass, and the other of mass $\mu$ moving with speed of the relative position \textbf{r}. 
+\begin{equation}
+	\label{}
+	\mathcal{L}=T-U=\frac{1}{2}M\dot{R}^{2}+\bigg(\frac{1}{2}\mu\dot{r}^{2}-U(r)\bigg)=\mathcal{L}_{cm}+\mathcal{L}_{rel}
+\end{equation}
+Separating the Lagrangian allows the solution of two independent functions, one a function of R, and one a function of r. This is convenient because we can set our reference frame according to R. 
+
+Position of either particle:
+\begin{equation}
+	\label{}
+	r_{i}=\frac{m_{j}}{M}r
+\end{equation}
+
+Angular Momentum
+\begin{equation}
+	\label{}
+	L=r \times \mu\dot{r}
+\end{equation}
+Because we know angular momentum is conserved, the direction of $r \times \dot{r}$ is constant, and thus all motion happens in a plane. 
+
+\textbf{From the Center of Mass point of view} the two orbiting bodies have equal momenta, so their masses gives relative velocities. 
+
+\begin{equation}
+	\label{}
+	\mu r \dot{\phi}^{2}-\frac{dU}{dr}=\mu\ddot{r}
+\end{equation}
+Which can easily be rearranged for force.
+\begin{equation}
+	\label{}
+	\dot{\phi}=\frac{l}{\mu r^{2}}
+\end{equation}
+Useful to substitute into preceding. 
+\begin{equation}
+	\label{}
+	U_{eff}(r)=U(r)+U_{cf}(r)=U(r)+\frac{l^{2}}{2\mu r^{2}}
+\end{equation}
+
+\begin{equation}
+	\label{}
+	r(\phi)=\frac{c}{1+\epsilon\cos{\phi}}
+\end{equation}
+where $c=\frac{l^{2}}{\gamma mu}$
+
+
+\hfill
+Relationship between eccentricity, $\epsilon$, and total energy. Negative energies give $\epsilon<1$ and bounded orbits. Positive energies give $\epsilon>1$ and unbounded orbits 1
+\begin{equation}
+	\label{}
+	E=\frac{\gamma^{2}\mu}{2l^{2}}(\epsilon^{2}-1)
+\end{equation}
+
+
+
+\section{Tensors}
+\subsection{Some vector identities}
+
+\begin{equation}
+	\label{}
+	(a \times  b)\cdot (c \times d)=(a\cdot c)(b\cdot d)-(b\cdot c)(a\cdot d)
+\end{equation}
+\begin{equation}
+	\label{}
+	a\cdot(b \times c)=b\cdot(c \times a)=c\dot(a \times b)
+\end{equation}
+\begin{equation}
+	\label{}
+	a \times (b \times c)=(c\cdot a)b=c(a\cdot b)
+\end{equation}
+
+\begin{equation}
+	\label{}
+	\frac{dQ}{dt}_{s_{0}}=\frac{dQ}{dt}_{s}+\Omega \times Q
+\end{equation}
+\begin{equation}
+	\label{}
+	m\ddot{\vec{r}}=-\nabla U - m \Omega \times (\Omega \times r)-2m(\Omega \times v)
+\end{equation}
+Where the second term after U is the \textbf{centrifugal force} and the last term is the \textbf{Coriolis force}
+
+Omega points in the \textbf{axis of rotation} and the magnitude represents the angular velocity.
+
+\section{Non-Inertial Reference Frames}
+In a reference frame with acceleration:
+\begin{equation}
+	\label{}
+	m\ddot{r}=F-mA,\quad F_{\mbox{inertial}}=-mA
+\end{equation}
+
+\begin{equation}
+	\label{}
+	\vec{\omega}=\omega\vec{u}
+\end{equation}
+Where u is the axis of rotation and $\omega$ is the angular velocity. 
+
+
+\hfill
+
+The velocity of any point or vector rotating on an axis is given by
+\begin{equation}
+	\label{}
+	v=\vec{\omega} \times r,\quad \frac{de}{dt}=\omega \times e
+\end{equation}
+
+
+
+Useful Identity
+\begin{equation}
+	\label{}
+	m(\Omega \times r) \times  \Omega = m\Omega^{2}\rho\hat{\rho}
+\end{equation}
+
+\section{Rotational Momentum}
+For a \textbf{symmetric} rotating system $L=I\omega$, $I=\sum(m_{i}r_{\perp i}^{2})$
+
+\begin{equation}
+	\label{}
+	I=\int r_{\perp}^{2} dm
+\end{equation}
+
+
+
+\end{document}
+
