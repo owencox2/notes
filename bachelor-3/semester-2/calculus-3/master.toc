@@ -1,54 +1,54 @@
-\contentsline {section}{\numberline {1}Sequences}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Sequence}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Converge and Divergence}{1}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Function raised to a function- incomplete}{1}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Geometric sequence and series }{2}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}trigonometric functions, divergence by oscillation}{2}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Squeeze Theorem}{2}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Bounded, Monotonic}{2}{subsection.1.7}%
-\contentsline {section}{\numberline {2}Series}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}series}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Sum does not start at n=0}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Telescoping Series}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Diverge and Integral Test}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Convergence of the p-series}{4}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Comparison Tests}{4}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Limit Comparison}{4}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Alternating Series and Absolute Convergence}{5}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Conditional Convergence}{5}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Ratio and Root Tests}{5}{subsection.2.10}%
-\contentsline {subsection}{\numberline {2.11}Convergence and Function Approximation. Power Series}{6}{subsection.2.11}%
-\contentsline {subsection}{\numberline {2.12}Taylor Series}{6}{subsection.2.12}%
-\contentsline {section}{\numberline {3}Polar, Cylindrical and Spherical Coordinates}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}General Polar Equation Forms}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Cylindrical and Spherical Coordinate Systems}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Between spherical, cylindrical, and rectangular coordinates}{7}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Vectors}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Parametrization Parametric}{8}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Differentiating and operating on Vector Valued Functions}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Length of a Vector Valued Function}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Unit Tangent Vector}{9}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Curvature}{9}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Principal Unit Normal Vector and Binormal Vector}{10}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Acceleration}{10}{subsection.4.7}%
-\contentsline {section}{\numberline {5}Integrals}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Non-rectangular}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}2 functions}{10}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Integration with Polar Coordinates}{11}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Triple integrals}{11}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Triple Integrals in Cylindrical and Spherical Coordinates}{11}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Vector Fields}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Normalizing a Vector field}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Gradient}{12}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Vector Line Integral}{12}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Flux}{12}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Circulation}{13}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Fundamental Theorem for Line Integrals}{13}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Green's Theorem}{13}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Parametrize an Ellipse}{13}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}Flux Form of Green's Theorem}{14}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}Harmonic functions}{14}{subsection.6.10}%
-\contentsline {subsection}{\numberline {6.11}Non simply connected regions}{14}{subsection.6.11}%
-\contentsline {subsection}{\numberline {6.12}Divergence}{14}{subsection.6.12}%
-\contentsline {subsection}{\numberline {6.13}Gradient Operator}{14}{subsection.6.13}%
-\contentsline {subsection}{\numberline {6.14}Curl}{14}{subsection.6.14}%
+\contentsline {section}{\numberline {1}Sequences}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Sequence}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Converge and Divergence}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Function raised to a function- incomplete}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Geometric sequence and series }{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}trigonometric functions, divergence by oscillation}{3}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Squeeze Theorem}{3}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Bounded, Monotonic}{4}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Series}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}series}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Sum does not start at n=0}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Telescoping Series}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Diverge and Integral Test}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Convergence of the p-series}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Comparison Tests}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Limit Comparison}{6}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Alternating Series and Absolute Convergence}{6}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Conditional Convergence}{6}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Ratio and Root Tests}{7}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Convergence and Function Approximation. Power Series}{7}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Taylor Series}{8}{subsection.2.12}%
+\contentsline {section}{\numberline {3}Polar, Cylindrical and Spherical Coordinates}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}General Polar Equation Forms}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Cylindrical and Spherical Coordinate Systems}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Between spherical, cylindrical, and rectangular coordinates}{9}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Vectors}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Parametrization Parametric}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Differentiating and operating on Vector Valued Functions}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Length of a Vector Valued Function}{10}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Unit Tangent Vector}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Curvature}{11}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Principal Unit Normal Vector and Binormal Vector}{11}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Acceleration}{11}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Integrals}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Non-rectangular}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}2 functions}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Integration with Polar Coordinates}{12}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Triple integrals}{12}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Triple Integrals in Cylindrical and Spherical Coordinates}{12}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Vector Fields}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Normalizing a Vector field}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Gradient}{13}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Vector Line Integral}{13}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Flux}{14}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Circulation}{14}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Fundamental Theorem for Line Integrals}{14}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Green's Theorem}{14}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Parametrize an Ellipse}{15}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Flux Form of Green's Theorem}{15}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Harmonic functions}{15}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Non simply connected regions}{15}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Divergence}{15}{subsection.6.12}%
+\contentsline {subsection}{\numberline {6.13}Gradient Operator}{15}{subsection.6.13}%
+\contentsline {subsection}{\numberline {6.14}Curl}{16}{subsection.6.14}%
