@@ -1,0 +1,384 @@
+\section{Probability Functions}
+Quantum mechanics is based on the study of the wave function. The wave function is a semi-abstract thing whose magnitude is a probability function. Thus the study of quantum mechanics begins with some study of probability.
+
+\subsection{Weighted Functions}
+When considering a discrete system the \textbf{expected value} is the hypothetical mean result if you were to take many measurements of a system. 
+
+If you have a discrete, normalized weighted function and some other function, in this case x, the average of the other function is found by
+
+\begin{equation}
+  \langle x \rangle = \sum_{i=1}^{n}=w_{i}~x_{i}
+\end{equation}
+
+
+
+For continuous functions individual weights are replaced with a \textbf{probability distribution function}:
+\begin{equation}
+  \langle x\rangle = \int x~\rho(x)~dx
+\end{equation}
+
+\begin{equation}
+  \text{Normal}\equiv \int\rho(x)~dx =1
+\end{equation}
+
+$ w_{i} $ has been generalized to a \textbf{probability distribution function,} $ \rho(x) $, which is unitless. 
+
+\subsubsection{The Quantum Probability Function (do I need this one?)}
+
+
+
+
+
+\subsubsection{Variance and standard deviation}
+\begin{equation}
+  \text{Variance}\equiv\sigma^2=\langle s^2 \rangle - \langle s\rangle^2=\langle{(\Delta s)}^2\rangle=\langle{(x-\langle x\rangle)}^2\rangle
+\end{equation}
+
+\[\sigma\equiv\text{standard deviation}.\]
+
+
+\subsection{Properties of Quantum Weighted Distributions}
+
+\begin{equation}
+  \langle a \rangle = \int \hat{a}~|\Psi(a)|^2~dx=\int~\Psi^{*}\hat{a}\Psi~dx
+\end{equation}
+Gives the expected value $ a $. It is integrated over space. $ |\Psi(x)| $ is experimentally measured, given, or derived.
+
+Here $ \hat{a} $ is  an operator, $ \Psi $ is the wave function, and $ |\Psi|^2 $ is the probability function.
+
+An important property of quantum functions is that they must satisfy these edge requirements:
+\begin{equation}
+ \Psi(\text{edge}) =0\text{, and, } \Psi'(\text{edge})=0
+\end{equation}
+
+
+\subsubsection{Derivatives of Expected Values}
+
+The derivative of an expected value gives the expected value of that\ldots as in
+\begin{equation}
+  \langle p\rangle = m \langle \frac{dx}{dt}\rangle = m \frac{d\langle x\rangle}{dt}
+\end{equation}
+
+
+
+
+
+\section{Schrodinger Equation}
+First, the full Equation
+\begin{equation}
+  i\hbar \frac{d\Psi}{dt}(r,t)=\frac{-\hbar^2}{2m}\nabla^2\Psi(r,t)+V(r)\Psi(r,t)
+\end{equation}
+
+
+
+First we assume the Schrodinger equation is time independent, then solve for a potential $ V (x,t) $, although we are assuming that $ V $ is actually time independent.
+
+This becomes the following, known as the \textbf{time\-- independent Schrodinger Equation}.
+\begin{equation}
+  -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V\psi=E\psi
+\end{equation}
+
+This system can be solved for different potential function, $ V(x) $, often using separation of variables, at least the infinite square well and harmonic operator. 
+
+The time-independent equation can also be written
+
+\begin{equation}
+  \hat{H}\Psi=E\Psi
+\end{equation}
+which holds for any component of the total solution as well.
+
+\subsection{Building the full solution, Time-Dependence}
+\textbf{Any wave function }can be fully represented by a solution of the following form
+\begin{equation}
+  \Psi(x,t)=\sum c_{n}\psi_{n}(x)e^{-\frac{iEnt}{\hbar}}
+\end{equation}
+
+These problems begin with a defined (measurable) $ \Psi(x,0) $. The general solution to the coefficients, $ c_{n} $ is as follows
+\begin{equation}
+  c_{n}=\int\psi_{n}^{*}\Psi(x,0)dx
+\end{equation}
+
+These coefficients correspond to the probability of measuring different energy levels. The sum of all should be 1. 
+\begin{equation}
+  |c_{n}|^2=1
+\end{equation}
+
+The expectation value of the energy is then
+\begin{equation}
+  \langle H\rangle = \sum_{n=1}^{\infty}|c_{n}|^2E_{n}
+\end{equation}
+
+
+$ A $ is found by normalizing $ |\Psi(x,0)|^2 $,
+\begin{equation}
+  1 = A^2\int|\Psi(x,0)|^2dx
+\end{equation}
+
+
+Each component of the total solution (each $ \psi  $ in $ \Psi $) is orthogonal and normalized:
+\begin{equation}
+  \int\psi_{m}(x)^{*}\psi_{n}(x)dx=\delta_{mn}
+\end{equation}
+
+\section{Solutions of the Schrodinger Equation}
+
+\subsection{The Infinite Square Well}
+
+let
+\[
+V(X) =
+\begin{cases}
+  0 & 0<x<a\\
+  \infty & \text{else}
+\end{cases}.\] 
+
+Using this with the time-independent Schrodinger equation yields
+\begin{equation}
+  \hat{H}\Psi=-\frac{\hbar^2}{2m}\Psi''=E\Psi
+\end{equation}
+Which is in the form of the common wave equation differential equation, and yields the following solutions. 
+
+\begin{equation}
+  \psi_n=\sqrt{\frac{2}{a}}\sin(\frac{n \pi}{a}x),\quad E_{n}=\frac{\hbar^2 \pi^2}{2ma^2}n
+\end{equation}
+
+Constants $ A $ and $ k $ are derived from the typical wave function solution, testing boundary conditions and normalizing.
+
+
+$ \psi_{n} $ and $ \Psi(x,0) $ can be used to find any $ c_{n} $ and then incorporated into the full sum for the total solution.
+
+
+
+
+\subsection{Harmonic Oscillator}
+In this the discussion of the harmonic oscillator will correspond to a system with $ V(x)=\frac{1}{2}m\omega^2 x^2 $. 
+
+This can be solved using power series, a typical, general method for solving differential equations, or using the raising and lowering operators.
+
+Based on the physical meaninglessness of states with $ E<0 $ the following statement can be made and solved (single order differential yields exponential function) for a \textbf{ground state}.
+\begin{equation}
+  \hat{a_{-}}\psi_0=0
+\end{equation}
+
+  A general form for $ \psi_0 $ in the harmonic oscillator: 
+\begin{equation}
+  \psi_0=(\frac{m\omega}{\pi\hbar})^{\frac{1}{4}}e^{- \frac{m\omega}{2\hbar}x^2},\quad E_{n}=(n+\frac{1}{2})\hbar \omega
+\end{equation}
+
+From this ground state the raising operators can determine any other component. The n coefficient ensures normality.
+\begin{equation}
+  \psi_{n}=\frac{1}{\sqrt{n!}}(\hat{a_{+}})^{n}\psi_0
+\end{equation}
+
+Like in the infinite square well, the components of the total function are  \textbf{orthonormal.}
+
+\subsection{The Free Particle}
+\[V(x)=0.\] 
+This leads to solutions that strongly resemble the infinite square well scenario, but in the case of the free particle there are no boundary conditions to be evaluated. This results in a wave function that is non-normalizable with our previous methods. 
+
+Instead working with the free particle is dependent on the relation of momentum and position, and the question is how to determine a $ \phi(k) $ that matches the initial $ \Psi(x) $:
+\begin{equation}
+  \Psi(x,0)=\frac{1}{\sqrt{2 \pi}}\int_{-\infty}^\infty \phi(k)e^{ikx}dk
+\end{equation}
+
+The study of Fourier analysis has given us Plancherel's theorem which give us our $ \phi $ 
+\begin{equation}
+  \\phi(k)=\frac{1}{\sqrt{2 \pi}}\int^{-\infty}^{\infty}\Psi(x,0)dx
+\end{equation}
+
+
+
+
+
+\section{Formalism}
+Quantum theory is based on wave functions and operators. The state of a function is represented as its wave function, while the observable are represented as operators.
+
+In quantum mechanics our vector spaces are the infinity of wave functions. The meaningful space is those that are normalizable, in this case equivalent to the set of \textbf{square integrable functions} whose integral converges. This vector space is \textbf{Hilbert Space}
+
+Inner products are represented
+\begin{equation}
+\braket{f(x)^{*}|g(x)} = \int_{a}^{b}f(x)^{*}g(x)dx
+\end{equation} 
+If $ f $ and $ g $ exist then their product exists.
+
+\textbf{Orthogonality} describes two functions whose inner product is zero, and a \textbf{normalized} function describes two functions whose inner product is 1. \textbf{Orthonormality} describes a set of functions that are normalized and mutually orthogonal.
+
+Orthogonal: \[\braket{f|g}=0.\] 
+Normal: \[\braket{f|g}=1.\] 
+Orthonormal: \[\braket{f_{n}|f_{m}}=\delta_{mn}.\] 
+
+If a set of function is \textbf{complete} if any \textit{other} function in Hilbert space can be described as a linear combination of them.
+\[\sum_{n=1}^{\infty}c_{n}f_{n}(x).\] 
+
+And if this set of functions is normal, Fourier's trick applies
+\begin{equation}
+  c_{n=\braket{f_{n}|f}}
+\end{equation}
+
+\subsection{Observables and Hermetian Operators}
+
+Expectation values of observables are expressed neatly in this notation
+\begin{equation}
+  \langle Q\rangle=\int\Psi^{*}\hat{Q}\Psi dx= \braket{\Psi|\hat{Q}\Psi}
+\end{equation}
+
+To actually get something observable, the result must be real. And thus the operator must be Hermitian,
+\begin{equation}
+  \braket{f|\hat{Q}f}=\braket{\hat{Q}f|f},\quad \hat{Q}^{\dag}=\hat{Q}
+\end{equation}
+Ultimately $ \hat{Q^{\dag}} $ is $ \hat{Q}^{*}^{T} $, but this is a little confusing for operators like the derivative. Mostly useful for generalized proofs I think.
+
+\subsection{Determinate states, eigenfunctions and degeneracy}
+
+Any \textbf{determinate state}, such as the energy level of the harmonic operator, in which only certain discrete values are allowed, is an eigenfunction of its operator. For instance, $ \hat{H}\Psi=E\Psi $.
+
+\textbf{Degeneracy} is the phenomenon in which different eigenfunctions share the same eigenvalue. For instance in three dimensions many different wavefunction conditions can result in the same energy level, meaning that energy level is degenerate. Degeneracy is also an integer value defined by the number of eigenfunctions that share the same eigenvector.
+
+Other wonderful properties of this are that all linear combinations of degenerate eigenfunctions are also eigenfunctions. We can also assume orthonormality between these functions.
+
+\textbf{Axiom: } the eigenfunction of an observable operator are complete, any function in Hilbert space can be expressed as a linear combination of them.
+
+\subsection{Generalized Statistical Interpretation}
+This, alongside the Schrodinger Equation, is the foundation of quantum mechanics.
+
+If you measure an observable you will get an eigenvalue of the observable's associated (hermitian) operator.
+
+The probability of getting a specific observable is
+
+discrete:
+\begin{equation}
+  |c_{n}|^2,\quad c_{n}=\braket{f_{n}|\Psi}
+\end{equation}
+Continuous:
+\begin{equation}
+  |c(z)|^2dz,\quad c(z)=\braket{f_{z}|\Psi}
+\end{equation}
+Thus expected values are given
+\begin{equation}
+  \langle Q\rangle=\sum_{n}q_{n}|c_{n}|^2
+\end{equation}
+
+\subsection{Uncertainty Principle}
+\begin{equation}
+  \sigma_{A}^2\sigma_{B}^2\geq(\frac{1}{2i}\langle [\hat{A},\hat{B}]\rangle)^2
+\end{equation}
+
+\subsection{The state function and bases}
+Ultimately we are dealing with one vector, the state function, in Hilbert space:
+\[|S(t)\rangle\] 
+We operate on this function to form more familiar functions we work with. The state function in position space, formed from the position basis, is
+\[\braket{x|S(t)}=\Psi(x,t).\]
+Which shows the $ \hat{x} $ operating on the state function, thus producing \textbf{an observable.}
+
+This is all in \textbf{braket notation}
+
+\section{Operators}
+Operators are denoted with hats. Operators can be just about anything but here we use the position operator, momentum operator, Hamiltonian, raising and lowering, time evolution operator and others probably.
+
+\begin{equation}
+  [\hat{A},\hat{B}]\equiv \hat{A}\hat{B}-\hat{B}\hat{A}
+\end{equation}
+
+canonical commutation relation
+\begin{equation}
+  [x,\hat{p}]i\hbar 
+\end{equation}
+
+\begin{equation}
+  \label{position-operator}
+  \hat{x}~\Psi = x~\Psi
+\end{equation}
+Momentum operator
+\begin{equation}
+  \label{momentum-operator}
+  \hat{p}\Psi = -i\hbar \frac{d\Psi}{dx}
+\end{equation}
+A nice trick for momentum is that
+\begin{equation}
+  \langle p\rangle = \frac{d\langle x\rangle}{dt}
+\end{equation}
+
+
+
+
+
+In practice they look as follows:
+
+\begin{equation}
+  \langle\text{KE}\rangle = \int\Psi^{*}\frac{\hat{p}^2}{2m}\Psi~dx
+\end{equation}
+
+\section{Time-Dependent Schrodinger Equation}
+
+\subsubsection{Total Solution}
+Then a general form for $ \psi_{n} $ is given using the raising and lowering Operators
+
+\begin{equation}
+  \hat{a}_{\pm}\equiv \frac{1}{\sqrt{2\hbar m\omega}}(\mp i\hat{p}+m\omega x)
+\end{equation}
+
+\begin{equation}
+  \psi_{n}(x)=A_{n}(\hat{a}_{+})^{n}\psi_0(x)\quad\text{,with}\quad E_{n}=(n+\frac{1}{2})\hbar\omega
+\end{equation}
+
+
+Energy of a $ \psi_{n} $ 
+\begin{equation}
+  \psi_{n}=\sqrt{\frac{2}{a}}\sin(\frac{n \pi}{a}x)
+\end{equation}
+
+  \begin{equation}
+    c_{n}=\int\psi_{n}^{*}\Psi(x,0)dx
+  \end{equation}
+  
+
+
+Here it is for the infinite square well
+\begin{equation}
+  f(x)=\sum_{n=1}^{\infty}C_{n}\sqrt{\frac{2}{a}}\sin(\frac{n \pi x}{a})
+\end{equation}
+
+\section{Solution for Hydrogen atom}
+\begin{equation}
+  \psi_{nlm}=\sqrt{\bigg(\frac{2}{na}\bigg)^{3}\frac{(n-l-1)!}{2n(n+l)!}}e^{-\frac{r}{na}}\bigg(\frac{2r}{na}\bigg)^{l}\big[L^{2l+1}_{n-l-1}\big(\frac{2r}{na}\big)\big]Y^{m}_{l}
+\end{equation}
+
+
+\subsubsection{Dirac Delta}
+\begin{equation}
+  \int f(x)\delta(x-a)dx=f(a)\int\delta(x-a)dx=f(a)
+\end{equation}
+
+
+\section{Angular Momentum}
+Angular momentum is defined by
+\begin{equation}
+  L=r \times p
+\end{equation}
+which expands to (cartiesian)
+\begin{equation}
+  L_{x}=yp_{z}-zp_{y},\quad L_{y}=zp_{x}-xp_{z},\quad L_{z}=xp_{y}-yp_{x}
+\end{equation}
+
+These do not commute,
+\begin{equation}
+  [L_{x},L_{y}]=i \hbar L_{z};\quad [L_{y},L_{z}]=i \hbar L_{x};\quad [L_{z},L_{x}]=i \hbar L_{y}
+\end{equation}
+
+Thus the components of angular momentum are incompatible observables and follow the uncertainty principle.
+
+The square of the total angular momentum does commute with each component and is thus useful.
+\begin{equation}
+  L^2=L_{x}^2+L_{y}^2+L_{z}^2
+\end{equation}
+
+We use a similar technique to the raising and lowering operators as we did for the one dimensional harmonic oscillator. Here the raising and lowering operators change $ m $, the level of angular momentum.
+
+\begin{equation}
+  L_{\pm}\equiv L_{x}\pm i L_{y}
+\end{equation}
+
+\begin{equation}
+  L^2f=\hbar^2\ell(\ell+1)f
+\end{equation}
+

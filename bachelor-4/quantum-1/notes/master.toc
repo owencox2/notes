@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Probability Functions}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Weighted Functions}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}The Quantum Probability Function (do I need this one?)}{3}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Variance and standard deviation}{3}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Properties of Quantum Weighted Distributions}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Derivatives of Expected Values}{4}{subsubsection.1.2.1}%
+\contentsline {section}{\numberline {2}Schrodinger Equation}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Building the full solution, Time-Dependence}{5}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Solutions of the Schrodinger Equation}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Infinite Square Well}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Harmonic Oscillator}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The Free Particle}{8}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Formalism}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Observables and Hermetian Operators}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Determinate states, eigenfunctions and degeneracy}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Generalized Statistical Interpretation}{10}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Uncertainty Principle}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}The state function and bases}{11}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Operators}{12}{section.5}%
+\contentsline {section}{\numberline {6}Time-Dependent Schrodinger Equation}{13}{section.6}%
+\contentsline {subsubsection}{\numberline {6.0.1}Total Solution}{13}{subsubsection.6.0.1}%
+\contentsline {section}{\numberline {7}Solution for Hydrogen atom}{14}{section.7}%
+\contentsline {subsubsection}{\numberline {7.0.1}Dirac Delta}{14}{subsubsection.7.0.1}%
+\contentsline {section}{\numberline {8}Angular Momentum}{15}{section.8}%
