@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+  \providebibliographyfont{name}{}%
+  \providebibliographyfont{lastname}{}%
+  \providebibliographyfont{title}{\emph}%
+  \providebibliographyfont{jtitle}{\btxtitlefont}%
+  \providebibliographyfont{etal}{\emph}%
+  \providebibliographyfont{journal}{}%
+  \providebibliographyfont{volume}{}%
+  \providebibliographyfont{ISBN}{\MakeUppercase}%
+  \providebibliographyfont{ISSN}{\MakeUppercase}%
+  \providebibliographyfont{url}{\url}%
+  \providebibliographyfont{numeral}{}%
+  \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {bpt-paper}
+\btxnamefont {\btxlastnamefont {Baldwin}, J.\btxfnamespacelong A.}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Classification {Parameters} for the {Emission}-{Line} {Spectra} of {Extragalactic} {Objects}}{Classification {Parameters} for the {Emission}-{Line} {Spectra} of {Extragalactic} {Objects}}}.
+\newblock {\latintext \btxurlfont{https://www.jstor.org/stable/40677820}}.
+
+\bibitem {byler-emission-line-predictions}
+\btxnamefont {\btxlastnamefont {Byler}, Nell}, \btxnamefont {Julianne\btxfnamespacelong J. \btxlastnamefont {Dalcanton}}, \btxnamefont {Charlie \btxlastnamefont {Conroy}}, \btxnamefont {Benjamin\btxfnamespacelong D. \btxlastnamefont {Johnson}}, \btxnamefont {Jieun \btxlastnamefont {Choi}}, \btxnamefont {Aaron \btxlastnamefont {Dotter}}\btxandcomma {} \btxandlong {}\ \btxnamefont {Philip \btxlastnamefont {Rosenfield}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Self-consistent {Predictions} for {LIER}-like {Emission} {Lines} from {Post}-{AGB} {Stars}}{Self-consistent {Predictions} for {LIER}-like {Emission} {Lines} from {Post}-{AGB} {Stars}}}.
+\newblock \btxjournalfont {The Astronomical Journal}, 158(1):2, \btxprintmonthyear{.}{6}{2019}{long}\ifbtxprintISSN {, \mbox{\btxISSN~\btxISSNfont {1538-3881}}}.
+\newblock {\latintext \btxurlfont{https://iopscience.iop.org/article/10.3847/1538-3881/ab1b70}}\empty \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2023-09-30}}}.
+
+\btxselectlanguage {en}
+\bibitem {inner-galaxy-liner-like-gas}
+\btxnamefont {\btxlastnamefont {Krishnarao}, D.}, \btxnamefont {R.\btxfnamespacelong A. \btxlastnamefont {Benjamin}}\btxandcomma {} \btxandlong {}\ \btxnamefont {L.\btxfnamespacelong M. \btxlastnamefont {Haffner}}\btxauthorcolon\ \btxjtitlefont {\btxifchangecase {Discovery of diffuse optical emission lines from the inner {Galaxy}: {Evidence} for {LI}({N}){ER}-like gas}{Discovery of diffuse optical emission lines from the inner {Galaxy}: {Evidence} for {LI}({N}){ER}-like gas}}.
+\newblock \btxjournalfont {Science Advances}, 6(27):eaay9711, \btxprintmonthyear{.}{7}{2020}{long}\ifbtxprintISSN {, \mbox{\btxISSN~\btxISSNfont {2375-2548}}}.
+\newblock {\latintext \btxurlfont{https://www.science.org/doi/10.1126/sciadv.aay9711}}\empty \btxurldatecomment {\btxkeywordlanguage {\btxurldatefont{2023-09-17}}}.
+
+\end{thebibliography}

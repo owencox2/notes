@@ -23,7 +23,6 @@ For continuous functions individual weights are replaced with a \textbf{probabil
 
 $ w_{i} $ has been generalized to a \textbf{probability distribution function,} $ \rho(x) $, which is unitless. 
 
-\subsubsection{The Quantum Probability Function (do I need this one?)}
 
 
 
@@ -172,6 +171,12 @@ From this ground state the raising operators can determine any other component. 
 
 Like in the infinite square well, the components of the total function are  \textbf{orthonormal.}
 
+The raising and lowering operators are given:
+
+\begin{equation}
+  \hat{a}_{\pm}\equiv \frac{1}{\sqrt{2\hbar m\omega}}(\mp i\hat{p}+m\omega x)
+\end{equation}
+
 \subsection{The Free Particle}
 \[V(x)=0.\] 
 This leads to solutions that strongly resemble the infinite square well scenario, but in the case of the free particle there are no boundary conditions to be evaluated. This results in a wave function that is non-normalizable with our previous methods. 
@@ -308,49 +313,43 @@ In practice they look as follows:
   \langle\text{KE}\rangle = \int\Psi^{*}\frac{\hat{p}^2}{2m}\Psi~dx
 \end{equation}
 
-\section{Time-Dependent Schrodinger Equation}
+\section{Three Dimensions}
 
-\subsubsection{Total Solution}
-Then a general form for $ \psi_{n} $ is given using the raising and lowering Operators
+\section{class}
+\begin{enumerate}
+  \item $ J $ : total angular momentum (orbital + spin)
+  \item $ m_{j} $ the z-component of the total angular momentum
+  \item $ l $ orbital angular momentum
+  \item $ m_{l} $ z-component of the orbital angular momentum
+  \item $ s $ spin angular momentum
+  \item $ m_{s} $ z-component of spin angular momentum
+\end{enumerate}
 
+
+
+
+\section{Angular Momentum and Spin}
+\subsection{Overview, commonality}
+
+$ \hat{L} $ and $ \hat{S} $ must satisfy
 \begin{equation}
-  \hat{a}_{\pm}\equiv \frac{1}{\sqrt{2\hbar m\omega}}(\mp i\hat{p}+m\omega x)
+ \hat{Q}^2 \ket{sm}=\hbar^2 q(q+1)\ket{sm},\quad \hat{Q}_{z}\ket{sm}=\hbar m \ket{sm}
 \end{equation}
-
 \begin{equation}
-  \psi_{n}(x)=A_{n}(\hat{a}_{+})^{n}\psi_0(x)\quad\text{,with}\quad E_{n}=(n+\frac{1}{2})\hbar\omega
+  \hat{Q}_{\pm}\ket{sm}=\hbar\sqrt{q(q+1)-m(m\pm 1)}\ket{s(m\pm 1)}
 \end{equation}
+Where $ \hat{Q} $ is $ \hat{L}\text{ or }\hat{S} $ and $ q $ is the total angular momentum or the inherent spin of the particle.
 
-
-Energy of a $ \psi_{n} $ 
+Raising operators are defined 
 \begin{equation}
-  \psi_{n}=\sqrt{\frac{2}{a}}\sin(\frac{n \pi}{a}x)
-\end{equation}
-
-  \begin{equation}
-    c_{n}=\int\psi_{n}^{*}\Psi(x,0)dx
-  \end{equation}
-  
-
-
-Here it is for the infinite square well
-\begin{equation}
-  f(x)=\sum_{n=1}^{\infty}C_{n}\sqrt{\frac{2}{a}}\sin(\frac{n \pi x}{a})
-\end{equation}
-
-\section{Solution for Hydrogen atom}
-\begin{equation}
-  \psi_{nlm}=\sqrt{\bigg(\frac{2}{na}\bigg)^{3}\frac{(n-l-1)!}{2n(n+l)!}}e^{-\frac{r}{na}}\bigg(\frac{2r}{na}\bigg)^{l}\big[L^{2l+1}_{n-l-1}\big(\frac{2r}{na}\big)\big]Y^{m}_{l}
+  Q_{\pm}\equiv Q_{x}\pm iQ_{y}
 \end{equation}
 
 
-\subsubsection{Dirac Delta}
-\begin{equation}
-  \int f(x)\delta(x-a)dx=f(a)\int\delta(x-a)dx=f(a)
-\end{equation}
+\subsection{Angular Momentum}
+owen note: can probably incorporate the spherical haronic revelation earlier for compactness
 
 
-\section{Angular Momentum}
 Angular momentum is defined by
 \begin{equation}
   L=r \times p
@@ -367,10 +366,12 @@ These do not commute,
 
 Thus the components of angular momentum are incompatible observables and follow the uncertainty principle.
 
-The square of the total angular momentum does commute with each component and is thus useful.
+The square of the total angular momentum does commute with each component and 
 \begin{equation}
   L^2=L_{x}^2+L_{y}^2+L_{z}^2
 \end{equation}
+
+Luckily $ L^2 $ commutes with any component of $ L $, meaning simultaneous eigenstates can be found between $ L^2 $ and $ L_{z} $. 
 
 We use a similar technique to the raising and lowering operators as we did for the one dimensional harmonic oscillator. Here the raising and lowering operators change $ m $, the level of angular momentum.
 
@@ -378,7 +379,94 @@ We use a similar technique to the raising and lowering operators as we did for t
   L_{\pm}\equiv L_{x}\pm i L_{y}
 \end{equation}
 
+Squaring this definition gives a new expression for $ L^2 $. We can use this with the face that $ L_{z} $, $ L^2 $, and $ L\pm f $ all may share an eigenfunction (here $ f $ ), along with the condition that there must be some maximum angular momentum so that $ L_{+}f=0 $, to find
+
 \begin{equation}
   L^2f=\hbar^2\ell(\ell+1)f
 \end{equation}
+
+Where $ \ell $ represents the highest angular momentum state possible in $L_{z}$, and $m $ represents the angular momentum in the $ z $ component.
+
+The same can be said with the lowering operator to show that the \textbf{lowest allowed state is $ -\ell $}.
+
+The two essential eigenstates of angular momentum are
+\begin{equation}
+  L^2f_{\ell}^{m}=\hbar^2\ell(\ell+1)f_{\ell}^{m},\quad L_{z}f_{\ell}^{m}=\hbar m_{\ell}^{m}
+\end{equation}
+
+\subsubsection{Spherical Angular Momentum}
+The components of angular momentum can easily be found first by using the spherical Laplacian and then decomposing unit spherical vectors into cartesian functions and $ \phi,\theta $ functions:
+\begin{equation}
+  L_{x}=-i \hbar\left(-\sin \phi \frac{\partial}{\partial \theta}-\cos \phi \cot \theta \frac{\partial}{\partial \phi}\right)
+\end{equation}
+\begin{equation}
+  L_{y}=-i \hbar\left(\sin \phi \frac{\partial}{\partial \theta}-\sin\phi \cot \theta \frac{\partial}{\partial \phi}\right)
+\end{equation}
+\begin{equation}
+  L_{z}=-i\hbar \frac{\partial}{\partial \phi}
+\end{equation}
+\begin{equation}
+  L_{\pm}=\pm\hbare^{\pm i \phi}\left(\frac{\partial}{\partial \theta}\pm i\cot \theta \frac{\partial}{\partial \phi}\right)
+\end{equation}
+
+The similar method of constructing $ L^2 $ and finding the eigenfunctions ultimately leads to finding the eigenfunctions to be the \textbf{spherical harmonics}, $ Y_{m}^{\ell} $, so that
+\begin{equation}
+  H\psi=E\psi,\quad L^2\psi=\hbar^2\ell(\ell+1)\psi,\quad L_{z}\psi=\hbar m\psi
+\end{equation}
+
+
+\subsection{Spin}
+Spin corresponds to a magnetic property of a particle.
+Spin is an inherent property of particles.
+
+The spin of a particle represents the number of spin states it could be in, i.e. a spin $ \frac{3}{2} $ particle could be in any state from $ -\frac{3}{2}\hbar $ to $ \frac{3}{2}\hbar $. 
+
+Spin is mathematically analogous to angular momentum, but ultimately we do not know what spin is.
+
+Each dimension has its own, independent spin. When put through a magnetic field, spin up electrons deflect in the direction of the magnetic field and vice versa. These selected spin up and spin down electrons are only in one direction. The others are unceratain (as in angular momentum case)
+
+Rather than being derivative operators the spin operators are conveniently represented as matrix operators. We use $ z $ as the default spin direction
+
+The spin states of a particle (in the $ z $ component) ranges in integer steps from $ m=-s $ to $ m=s $ either as multiples of $ \frac{1}{2}\hbar $ or $ \hbar $.
+
+\subsubsection{Spin one-half}
+For a spin $ \frac{1}{2} $ particle there are only two states, up and down. Represented $ \ket{\frac{1}{2}\frac{1}{2}} $ and $ \ket{\frac{1}{2}(- \frac{1}{2})} $ The first number in the ket represents the intrinsic spin, $ s $, and the second represents the spin state, $ m $. This can be represented conveniently with basis vectors
+\begin{equation}
+  \chi = \begin{bmatrix}
+  1\\0
+  \end{bmatrix} = a\chi_{+}+b\chi_{-},\quad \chi_{-}=\begin{bmatrix}
+  0\\1
+  \end{bmatrix},\quad\chi_{-}\begin{bmatrix}
+  0\\1
+  \end{bmatrix}
+\end{equation}
+
+
+
+
+
+
+
+
+\section{cleanup below}
+
+section{Solution for Hydrogen atom}
+\begin{equation}
+  \psi_{nlm}=\sqrt{\bigg(\frac{2}{na}\bigg)^{3}\frac{(n-l-1)!}{2n(n+l)!}}e^{-\frac{r}{na}}\bigg(\frac{2r}{na}\bigg)^{l}\big[L^{2l+1}_{n-l-1}\big(\frac{2r}{na}\big)\big]Y^{m}_{l}
+\end{equation}
+
+
+\subsubsection{Dirac Delta}
+\begin{equation}
+  \int f(x)\delta(x-a)dx=f(a)\int\delta(x-a)dx=f(a)
+\end{equation}
+
+
+
+
+
+
+
+
+
 

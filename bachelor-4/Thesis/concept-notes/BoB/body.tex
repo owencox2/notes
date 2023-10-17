@@ -1,0 +1,38 @@
+\section{Stellar Radiation for Cloudy Input}
+\subsection{Stellar Blackbodies, ch 3.4}
+``Stars and planets are blackbodies, at least to a rough first approximation''.
+Luminosity is related to temperature by:
+\begin{equation}
+  L=4\pi~R^2~\sigma~T^{4}_{e}
+\end{equation}
+
+\subsection{Formation of Spectral Lines, ch 8.1}
+The \textbf{Maxwell-Boltzman Distribution} gives statistical gas partical velocities. The \textbf{Botlzmann Equation} gives velocity distribution of particles in a gas as a function of T. The \textbf{Saha Equation} gives probabilities of the different energy level occupation configuration. Boltzmann and Saha require thermodynamic equilibrium.
+
+\\\\
+Figure 8.1 is a diagram of the strength of spectral lines as a function of temperature. Could be useful.
+
+\subsection{The Boltzmann Equation, relative occupation of energy levels}
+\begin{equation}
+  \frac{N_{b}}{N_{a}}=\frac{g_{b}e^{-E_{b}/kT}}{g_{a}e^{-E_{a}/kT}}=\frac{g_{b}}{g_{a}}\ e^{-(E_{b}-E_{a})/kT}
+\end{equation}
+The Boltzmann Equation relates the number of atoms in each energy level, where $ a $ and $ b $ are both energy levels of an atom. This gives the relative strengths of emission and absorption lines within an atom. $ g $ represents the degeneracy of the energy level. $ g\in \mathbb{Z} $. $ E $ is energy level and $ N $ is number in that state.
+
+\subsubsection{The Saha Equation, percentage of ionization equation}
+Gas must be in thermal equilibrium and have a density $ < 1~kg~m^{-3} $ 
+\begin{equation}
+  \frac{N_{i+1}}{N_{i}}=\frac{2~Z_{i+1}}{n_{e}Z_{i}}~{\bigg( \frac{2 \pi m_{e}kT}{h^2}\bigg)}^{\frac{3}{2}}~e^{-\chi_{I}/kT}
+\end{equation}
+
+This describes the ratio of higher-level atoms to lower level atoms (example: HII to HI) as a function of temperature, $ T $, energy required for ejection of an electron from the ground state, $ \chi $, and electron properties of the ionized gas, $ m_{e},~n_{e} $.\\
+\textbf{Note: }This is also formulated with electron pressure, $ P_{e} $, whose determination is explained in section 9.5. $ P_{e}=n_{e}kT $. \\\\
+This equation also depends on the \textbf{partition functions}, $ Z $, for the initial and final atoms:
+\begin{equation}
+  \label{partition-functions}
+  Z=\sum_{j=1}^{\infty}g_{j}~e^{-(E_{j}-E_{1})/kT}
+\end{equation}
+Where $ E_{j} $ is the energy of the $ j $th energy level and $ g_{j} $ is the degeneracy of that level.
+
+
+
+

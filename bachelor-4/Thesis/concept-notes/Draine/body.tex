@@ -1,0 +1,180 @@
+\section{Draine, Interstellar Medium}
+Things I do not yet understand: degeneracy, Maxwellian velocity distribution, and $ \phi_{\nu}d\nu $, probability that emitted photon will have frequency within range $ (\nu,\nu+d\nu) $ What is effective emission?
+
+\subsection{Chapter Six: Spontaneous Emission, Stimulated Emission, and Absorption}
+
+\subsubsection{absorption}
+
+If an absorber $ X $ is in a level $ l $ and there is radiation present with photons having an energy level equal to $ E_{u}-E_{l} $, where $ E_{l} $ and $ E_{u} $ are the energies of levels $ l $ (``lower'') and $ u $ (``upper''), the absorber can absort a photon and undergo a transition:
+\begin{equation}
+  \text{absorption: } X_{l}+h\nu\to X_{u}, h\nu = E_{u}-E_{l}
+\end{equation}
+
+This is proportion to the number density of absorbers in the level $ l $. Rate per volume at which absorbers absorb photons is proportional to the density of photons with proper energy and the number density of absorbers.
+
+Where $ u_{v} $ is the radiation energy density per unit frequency and the proportionality constant $ B_{lu} $ is the \textbf{Einstein} $ B $ \textbf{coefficient} for the transition $ l\to u $ 
+
+\begin{equation} 
+  \big(\frac{dn_{l}}{dt}\big)_{l\to u}= -\big(\frac{dn_{l}}{dt}\big)_{l\to u} = n_{l}B_{lu}u_{\nu},\quad v=\frac{E_{u-E_{l}}}{h}
+\end{equation}
+\subsubsection{emission}
+
+In absorber $ X $ in an excited level $ u $ can decay to a lower level $ l $ with emission of a photon. There are two ways this happens:
+\begin{equation}
+  \text{spontaneous emission: } X_{u}\to X_{l}+h\nu \quad \nu=(E_{u}-E_{l})/h
+\end{equation}
+\begin{equation}
+  \text{stimulated emission: } X_{u}+h\nu\to X_{l}+2h\nu\quad \nu=(E_{u}-E_{l})/h
+\end{equation}
+
+\textbf{Spontaneous Emission} is a random process independent of radiation with a probability per unit time $ A_{ul} $, the \textbf{Einstein }$ A $ \textbf{coefficient}.
+
+\textbf{Stimulated Emission} occurs when photons of identical frequency, polarization, and direction of propagation are already present. Proportional to density of these photons. Total depopulation rate of level $ u $  due to emission of photons can be written
+
+\begin{equation}
+  {(\frac{dn_{u}}{dt})}_{u\to l}= -{(\frac{dn_{l}}{dt})}_{u\to l} = n_{l}B_{lu}u_{\nu},\quad n_{u}(A_{ul}+B_{ul}u_{\nu})
+\end{equation}
+Coefficient $ B_{ul} $ is the Einstein $ B $ coefficient for the downward transition. Three coefficients are now characterizing radiative transfer between these two levels. $ A $ from up to low, B from up to low, and B from low to up. 
+
+In thermal equilibrium thhe radiation field becomes the blackbody field, with intensity given by the blackbody spectrum.
+
+\begin{equation}
+  B\nu = \frac{2h\nu^{3}}{c^2}\frac{1}{e^{h\nu/kT}-1}
+\end{equation}
+
+
+
+
+\subsection{Chapter Seven}
+\textbf{Radiative Transfer Theory} decribes the propagation of radiation through absorbing and emitting media
+\subsubsection{Physical Quantities}
+\textbf{Specific Intensity}, $ I_{\nu}(\nu) $ represents the electromagnetic power per unit area, with frequencies in $ [\nu,\nu + d\nu] $  in direction $ \hat{n} $ within solid angle $ d\Omega $
+\begin{equation}
+   I_{\nu}(\nu,\hat{n},\vec{r},t) d\nu d\Omega
+\end{equation}
+
+If radiation field is in local thermodynamic equilibrium (LTE), the intensity is equal to that of a blackbody.
+
+\textbf{Photon occupation number} $ n_{\gamma}(\nu) $ 
+The photon occupation number is a dimensionless, and is simply the number of photons per mode per polarization. If field in LTE
+
+\textbf{Brightness temperature} $ T_{B}(\nu) $ 
+The brightness Temperature is defined as the temperature such that a blackbody at that temperature would have specific intensity $ B_{\nu}(T_{B}) = I_{\nu} $. In LTE this is equal to the actual thermodynamic temperature of the emitting and absorbing material.
+
+\textbf{Antenna Temperature} $ T_{A}(\nu) $  A nonlinear measure of intensities, because it is linear in the limit that $ kT_{A}>>h\nu $, one sees $ T_{A}\approx T_{B} $. This is commonly the case at radio frequencies.
+
+\textbf{Specific Energy Density} $ u_{\nu}(\nu) $ 
+\begin{equation}
+  u_{\nu}(\nu,\vec{r}) = \frac{1}{c_{m}}\int I_{\nu}\Omega
+\end{equation}
+Where $ c_{m} $ is speed of light in a medium. $ u_{\nu} $ has no direction.
+
+
+All preceding definitions are essentially the same and can be obtained by each other. They all pertain to the strength of the radiation field.\ \textbf{Emission and absorption} are characterized by relative importance in the following:
+
+\textbf{Excitation temperature} $ T_{ \text{exc}} $ 
+The excitation temperature of a level $ u $ relative to level $ l $ 
+\begin{equation}
+  \frac{n_{u}}{n_{l}} = \frac{g_{u}}{g_{l}}e^{-E_{ul}/kT_{\text{exc,}ul}}
+\end{equation}
+where $ n_{u} $,$ n_{l} $ are the populations of the upper and lower levels: $ g_{u},g_{l} $ are the degeneracies of the upper and lower levels, $ E_{ul}\equiv E_{u}-E_{l}$.
+
+\textbf{WHAT IS A DEGENERACY?}
+
+\subsubsection{Equations of Radiative Transfer}
+When considering a beam of radiation entering a slab of material, only considering absorption and emission, intensity evolves according to this equation of radiative transfer:
+\begin{equation}
+  dI_{\nu}= -I_{\nu}\kappa_{\nu}ds + j_{\nu}ds
+\end{equation}
+where $ s $ is the pathlength along the direction of propagation. The first term represents change in $ I_{\nu} $ due to absorption and stimulated emission, and $ j_{\nu} $ ds is the change in $ I_{\nu} $ due to spontaneous emission by material in the path of the beam. $ \kappa_{\nu} $ is the \textbf{attenuation coefficient} per frequency, dimensions of inverse length. $ j_{\nu} $ is the \textbf{emissivity} at frequency $ \nu $, with dimensions of power per unit volume per unit frequency per unit solid angle
+
+When the beam leaves the material, it will have intensity $ I_{\nu} + dI_{\nu} $.
+
+Absorption and emission are caused by a variety of things. Atoms, ions and molecules with discrete energy level contribute in the following.
+
+\begin{equation}
+  j_{\nu}=\frac{1}{4\pi}n_{u}A_{ul}h\nu\phi_{nu}
+\end{equation}
+Where $ \phi_{\nu}dv $ is the probability that the emitted photon will have frequency in the range $ (\nu,\nu+d\nu) $ (see Draine 6.5). 
+
+The attenuation coefficient is proportional to \textbf{net absorption}, true absorption minus stimulated emission.
+
+\begin{equation}
+  \begin{split}
+    \kappa_{\nu}&=n_{l}\sigma_{l\to u}(\nu)-n_{u}\sigma_{u\to l}(\nu)\\
+                &=n_{l}\sigma_{l\to u}(\nu)[1-\frac{n_{u}/n_{l}}{g_{u}/g_{l}}]\\
+                &=n_{l}\sigma_{l\to u}(\nu)\big[1-e^{-h\nu/kT_{\text{exc}}}\big]\\
+  \end{split}
+\end{equation}
+
+Absorption cross section $ \sigma_{l\to u}(\nu) $ is given by Eq. (6.37 Draine) for absorbers with a Maxwellian velocity distribution.
+
+\subsubsection{Integration of Equation of Radiative Transfer}
+It is convenient to write pathlength $ s $ in terms of optical depth, defined
+\begin{equation}
+  d\tau_{\nu}\equiv\kappa_{\nu ds}
+\end{equation}
+According to this definition, radiate propagates in direction of increasing $ \tau_{\nu} $ as long as $ \kappa_{\nu} > 0$, in which case
+\begin{equation}
+  \label{radiative_transfer_no_scattering}
+  dI_{\nu}=-I_{\nu}d\tau_{\nu}+S_{\nu}d\tau_{\nu}
+\end{equation}
+where
+\begin{equation}
+  S_{\nu}\equiv \frac{j_{\nu}}{\kappa_{\nu}}
+\end{equation}
+This is known as the \textbf{source function}. 
+
+Integration of Eq.~\ref{radiative_transfer_no_scattering} is outlined in pg. 67 of Drain. Results in 
+\begin{equation}
+  I_{\nu}(\tau_{\nu})=I_{\nu}(0)e^{-\tau_{\nu}}~+~\int_{0}^{\tau_{\nu}}e^{-(\tau_{\nu}-\tau')}S_{\nu}d\tau'
+\end{equation}
+This is a fully general solution to the equation of radiative transfer if scattering is ignored. Intensity as a function of optical depth is the initial intensity attenuated by a factor of $ e^{-\tau_{\nu}} $, plus the integral over the emission $ S_{\nu}d\tau' $ attenuated by the factor of $ e^{-(\tau_{\nu} - \tau ')} $  due to effective absorption over the path from the point of emission.
+
+When considering propagation of \textbf{optical or higher frequency radiation} through cold interstellar clouds, upper levels of the atoms and ions usually have negligible populations, and stimulated emission can be neglected.
+\[\kappa_{\nu}\approx n_{l}\sigma_{l\to u}.\] 
+
+\subsection{Chapter Thirteen, Photoionization}
+
+In an HII region around an early O star, the hydrogen may bemostly ionized, the helium may be mostly singly ionized, and elements like oxygen or neon mainly doubly ionized (OIII and NeIII). In a Lyman $ \alpha $ cloud, hydrogen and helium may be mostly ionized, with C triply ionized.
+
+The nonrelativistic quantum mechanics of hydrogen and one-electron ions is simple that ground-state photoelectric cross sections for photons with energy $ h\nu > Z^2I_{H} $ is given by an analytic expression
+\begin{equation}
+  \sigma_{\text{pe}} = \sigma_{0}{\big(\frac{Z^2I_{H}}{h\nu}\big)}^{4}\frac{e^{4-4\arctan(x)/x}}{1-e^{-2\pi}/x},x\equiv\sqrt{\frac{h\nu}{Z^2I_{H}}-1}
+\end{equation}
+Where $ Z $ is the atomic number of the nucleus, and $ \sigma_{0} $ is the cross section at threshold
+\begin{equation}
+  \sigma_{0}\equiv \frac{2^{9}\pi}{3e^{4}}Z^{-2}\alpha \pi a^2_{0}=6.304 \times 10^{-18}Z^{-2}cm^2
+\end{equation}
+Where $ e $ is the mathematical constant.
+
+Other energy levels can be found at page 128 of Draine. At $ h\nu\approx_2.5keV $ photoionization of H is dominated by Compton Scattering
+
+It gets pretty complicated after this talking about atoms and ions with higher electron counts. Go back if necessary.
+
+
+
+
+\subsection{Chapter Fifteen.1, HII Regions as Stromgren Spheres}
+\subsection{Chapter 18, Nuclear Diagnostics}
+To probe an emission nebula the following are required
+\begin{enumerate}
+  \item sufficiently abundant
+  \item     energy levels at suitable energies
+  \item radiative transitions that allow observation of these levels
+\end{enumerate}
+
+\subsubsection{18.7, BPT Diagram}
+
+\textbf{Active Galactic Nuclei} will usually dominate the emissions of a galaxy. They are characterized by high-ionization species like C IV and Ne V, which are ionized from x-rays originating from the AGN\@. Also known as Serfert galaxies. Extremely luminous, point-like nuclei.
+
+
+\textbf{Low Ionization Nuclear Emission Regions} strong emission lines but from low-ionization species.
+
+\textbf{Baldwin, Philips and Terlevich (1981)} asserted that star-forming galaxies can be distinguished from AGN by plotting [O III]$ \lambda 5008 / \text{H}\beta $ vs [N II]$ \lambda 6586 / \text{H}\alpha $. This is the \textbf{BPT Diagram}. These emission lines are the strongest optical emissions from H II regions, and they use pairs of similar wavelengths so that the ratios are \textbf{nearly unaffected by dust extinction.}
+
+\textbf{LINERs are defined by} [N II]$ \lambda 6586 / \text{H}\alpha > 0.6$ and [O III]$ \lambda 5008 / \text{H}\beta > 3$. They have temperature exceeding $ 10^{4} $ K, which is required to satisfy first condition while maintaining relatively low ionization.
+
+\textbf{Veilleux & Osterbrock 1987} have suggested that LINERs are systems where an AGN is emitting hard x rays that only partially ionize nearby gas...... look into for sure
+
+LINERs oxygen is mostly in [O I] and [O II], with $ \text{O I}\lambda 6302/\text{H}\alpha > 0.16$. This is very different than an H II regions. H II regions and LINERs are easily seperated by plotting [O III] to [O I] (Ho 2008)

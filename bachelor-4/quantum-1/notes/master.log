@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.7)  11 OCT 2023 00:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.7)  16 OCT 2023 18:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -637,11 +637,6 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 2.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 2.
-
-Overfull \hbox (0.9842pt too wide) in paragraph at lines 3--3
- [][] [][]\OT1/ppl/m/n/10 The Quan-tum Prob-a-bil-ity Func-tion (do I need 
- []
-
 )
 \tf@toc=\write4
 \openout4 = `master.toc'.
@@ -671,26 +666,26 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Overfull \hbox (12.37381pt too wide) in paragraph at lines 40--40
+Overfull \hbox (12.37381pt too wide) in paragraph at lines 39--39
 |[]\OT1/ppl/m/sc/12 properties of quan-tum weighted dis-tri-bu-tions| 
  []
 
 [3
 
 ] [4]
-./body.tex:66: Missing number, treated as zero.
+./body.tex:65: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.66 \section{Schrodinger Equation}
+l.65 \section{Schrodinger Equation}
                                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./body.tex:66: Illegal unit of measure (pt inserted).
+./body.tex:65: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.66 \section{Schrodinger Equation}
+l.65 \section{Schrodinger Equation}
                                    
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -700,31 +695,31 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Overfull \hbox (32.44426pt too wide) in paragraph at lines 76--77
+Overfull \hbox (32.44426pt too wide) in paragraph at lines 75--76
 []\OT1/ppl/m/n/10 This be-comes the fol-low-ing, known as the \OT1/ppl/b/n/10 time-- in-de-pen-dent Schrodinger
  []
 
 
-Overfull \hbox (2.34119pt too wide) in paragraph at lines 90--90
+Overfull \hbox (2.34119pt too wide) in paragraph at lines 89--89
 |[]\OT1/ppl/m/sc/12 building the full so-lu-tion, time-dependence| 
  []
 
 [5
 
 ] [6]
-./body.tex:123: Missing number, treated as zero.
+./body.tex:122: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.123 ...on{Solutions of the Schrodinger Equation}
+l.122 ...on{Solutions of the Schrodinger Equation}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./body.tex:123: Illegal unit of measure (pt inserted).
+./body.tex:122: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.123 ...on{Solutions of the Schrodinger Equation}
+l.122 ...on{Solutions of the Schrodinger Equation}
                                                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -736,25 +731,25 @@ two letters. (See Chapter 27 of The TeXbook.)
 [7
 
 ]
-./body.tex:186: Double superscript.
-l.186 ...(k)=\frac{1}{\sqrt{2 \pi}}\int^{-\infty}^
+./body.tex:191: Double superscript.
+l.191 ...(k)=\frac{1}{\sqrt{2 \pi}}\int^{-\infty}^
                                                   {\infty}\Psi(x,0)dx
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 [8]
-./body.tex:193: Missing number, treated as zero.
+./body.tex:198: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.193 \section{Formalism}
+l.198 \section{Formalism}
                          
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./body.tex:193: Illegal unit of measure (pt inserted).
+./body.tex:198: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.193 \section{Formalism}
+l.198 \section{Formalism}
                          
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -764,42 +759,42 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 
-Overfull \hbox (1.814pt too wide) in paragraph at lines 204--205
+Overfull \hbox (1.814pt too wide) in paragraph at lines 209--210
 []\OT1/ppl/b/n/10 Orthogonality \OT1/ppl/m/n/10 de-scribes two func-tions whose in-ner prod-uct is zero,
  []
 
 [9
 
 ]
-./body.tex:229: Double superscript.
-l.229 ...tely $ \hat{Q^{\dag}} $ is $ \hat{Q}^{*}^
+./body.tex:234: Double superscript.
+l.234 ...tely $ \hat{Q^{\dag}} $ is $ \hat{Q}^{*}^
                                                   {T} $, but this is a littl...
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 
-Overfull \hbox (0.3436pt too wide) in paragraph at lines 235--236
+Overfull \hbox (0.3436pt too wide) in paragraph at lines 240--241
 \OT1/ppl/m/n/10 an in-te-ger value de-fined by the num-ber of eigen-func-tions that share
  []
 
 
-Overfull \hbox (3.52394pt too wide) in paragraph at lines 242--243
+Overfull \hbox (3.52394pt too wide) in paragraph at lines 247--248
 []\OT1/ppl/m/n/10 This, along-side the Schrodinger Equa-tion, is the foun-da-tion of quan-
  []
 
 [10] [11]
-./body.tex:275: Missing number, treated as zero.
+./body.tex:280: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.275 \section{Operators}
+l.280 \section{Operators}
                          
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./body.tex:275: Illegal unit of measure (pt inserted).
+./body.tex:280: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.275 \section{Operators}
+l.280 \section{Operators}
                          
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -811,20 +806,20 @@ two letters. (See Chapter 27 of The TeXbook.)
 [12
 
 ]
-./body.tex:311: Missing number, treated as zero.
+./body.tex:316: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.311 ...tion{Time-Dependent Schrodinger Equation}
-                                                  
+l.316 \section{Three Dimensions}
+                                
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./body.tex:311: Illegal unit of measure (pt inserted).
+./body.tex:316: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.311 ...tion{Time-Dependent Schrodinger Equation}
-                                                  
+l.316 \section{Three Dimensions}
+                                
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -832,27 +827,78 @@ To recover gracefully from this error, it's best to
 delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
+./body.tex:318: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.318 \section{class}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 313.
+./body.tex:318: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.318 \section{class}
+                     
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 [13
 
 ]
-./body.tex:341: Missing number, treated as zero.
+./body.tex:331: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.341 \section{Solution for Hydrogen atom}
-                                          
+l.331 \section{Angular Momentum and Spin}
+                                         
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-./body.tex:341: Illegal unit of measure (pt inserted).
+./body.tex:331: Illegal unit of measure (pt inserted).
 <to be read again> 
                    \protect 
-l.341 \section{Solution for Hydrogen atom}
-                                          
+l.331 \section{Angular Momentum and Spin}
+                                         
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+[14
+
+]
+./body.tex:409: Undefined control sequence.
+l.409   L_{\pm}=\pm\hbare
+                         ^{\pm i \phi}\left(\frac{\partial}{\partial \theta}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[15] [16]
+./body.tex:451: Missing number, treated as zero.
+<to be read again> 
+                   \protect 
+l.451 \section{cleanup below}
+                             
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./body.tex:451: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \protect 
+l.451 \section{cleanup below}
+                             
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -862,51 +908,27 @@ two letters. (See Chapter 27 of The TeXbook.)
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 347.
+(hyperref)                than one, level fixed on input line 459.
 
-[14
-
-]
-./body.tex:353: Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.353 \section{Angular Momentum}
-                                
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./body.tex:353: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.353 \section{Angular Momentum}
-                                
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-) [15
+) [17
 
 ] (./master.aux)
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 6BF23B801A767BA823C64D18B6848B89;4733.
+(rerunfilecheck)             Checksum: C855C3EFE2302CF52798000A243AD28D;4905.
  ) 
 Here is how much of TeX's memory you used:
- 14628 strings out of 477985
- 236145 string characters out of 5840059
- 1859388 words of memory out of 5000000
- 34457 multiletter control sequences out of 15000+600000
+ 14650 strings out of 477985
+ 236383 string characters out of 5840059
+ 1861388 words of memory out of 5000000
+ 34461 multiletter control sequences out of 15000+600000
  539536 words of font info for 105 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  77i,9n,80p,1195b,471s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on master.pdf (15 pages, 137949 bytes).
+Output written on master.pdf (17 pages, 143837 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
- 90 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 312 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
